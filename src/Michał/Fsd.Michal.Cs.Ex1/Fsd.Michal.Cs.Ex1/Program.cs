@@ -13,9 +13,9 @@ namespace Fsd.Michal.Cs.Ex1
             {
                 Console.WriteLine($"Argument { i + 1}  of {args.Length}");
                 Console.WriteLine(($"Value : {args[i]}"));
-                Console.WriteLine($"Upper letters: {WordAnalizer.CountUpperLetters(args[i])}");
-                Console.WriteLine($"Lower letters: {WordAnalizer.CountLowerLetter(args[i])}");
-                Console.WriteLine($"Digits: {WordAnalizer.CountDigits(args[i])}\n");
+                Console.WriteLine($"Upper letters: {WordAnalyzer.CountUpperLetters(args[i])}");
+                Console.WriteLine($"Lower letters: {WordAnalyzer.CountLowerLetter(args[i])}");
+                Console.WriteLine($"Digits: {WordAnalyzer.CountDigits(args[i])}\n");
 
             }
 

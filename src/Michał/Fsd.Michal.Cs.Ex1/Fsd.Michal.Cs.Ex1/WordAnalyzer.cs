@@ -3,7 +3,7 @@
 
 namespace Fsd.Michal.Cs.Ex1
 {
-    class WordAnalizer
+    class WordAnalyzer
     {
 
         public static int CountDigits(string word)
