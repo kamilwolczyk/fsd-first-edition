@@ -10,12 +10,20 @@ namespace Fsd.Kamil.Cs.Ex1
 
             Console.WriteLine("Exercise 1 - Introduction");
             Console.WriteLine(line);
+            Console.WriteLine($"Today is {DateTime.Now.ToShortDateString()}");
             Console.WriteLine();
             Console.WriteLine("Console arguments:");
             Console.WriteLine();
 
-            for (int i = 0; i < args.Length; i++)
-                ShowArgumentInfo(args[i], i, args.Length);
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Arguments have not been specified.");
+            }
+            else
+            {
+                for (int i = 0; i < args.Length; i++)
+                    ShowArgumentInfo(args[i], i, args.Length);
+            }
 
             End();
         }
