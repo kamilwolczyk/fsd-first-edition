@@ -10,9 +10,11 @@ namespace Fsd.Maciek.Cs.Ex1
             int lowerCaseCount = 0;
             int upperCaseCount = 0;
             int digitsCount = 0;
+            string information = args.Length > 0 ? "Console arguments:\n" : "Oops, there are no arguments.\n";
 
-            Console.WriteLine($"Excercise 1 - Introduction\n------------------------------------------------\nToday is {DateTime.Now.ToString("yyyy-MM-dd")} \n\nConsole arguments:\n");
-            
+            Console.WriteLine($"Excercise 1 - Introduction\n------------------------------------------------\nToday is {DateTime.Now.ToString("yyyy-MM-dd")} \n");
+            Console.WriteLine(information);
+                        
             foreach (var arg in args)
             {
                 argsCount += 1;
