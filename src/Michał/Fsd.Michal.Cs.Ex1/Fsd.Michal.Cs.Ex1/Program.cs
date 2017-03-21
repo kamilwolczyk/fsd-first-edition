@@ -7,7 +7,7 @@ namespace Fsd.Michal.Cs.Ex1
     {
         static void Main(string[] args)
         {
-            Headder();
+            Header();
 
             if (args.Length > 0)
             {
@@ -18,7 +18,6 @@ namespace Fsd.Michal.Cs.Ex1
                     Console.WriteLine($"Upper letters: {WordAnalyzer.CountUpperLetters(args[i])}");
                     Console.WriteLine($"Lower letters: {WordAnalyzer.CountLowerLetter(args[i])}");
                     Console.WriteLine($"Digits: {WordAnalyzer.CountDigits(args[i])}\n");
-
                 }
             }
 
@@ -28,22 +27,18 @@ namespace Fsd.Michal.Cs.Ex1
             Footer();
         }
         
-        static void Headder()
+        static void Header()
         {
-
             Console.WriteLine("Exercise 1 - Introduction");
             Console.WriteLine("------------------------------------------------------------------------");
             Console.WriteLine($"Today is {DateTime.Now.ToShortDateString()}\n");
             Console.WriteLine("Console arguments:\n");
-            
         }
 
         static void Footer()
         {
             Console.WriteLine("\nClick any key to continue...");
             Console.ReadKey();
-
         }
-        
     }
 }

@@ -1,14 +1,13 @@
 ﻿using System;
 
-
 namespace Fsd.Michal.Cs.Ex1
 {
     class WordAnalyzer
     {
-
         public static int CountDigits(string word)
         {
             int count = 0;
+
             foreach (Char c in word)
                 if (char.IsDigit(c))
                     count++;
@@ -16,10 +15,10 @@ namespace Fsd.Michal.Cs.Ex1
             return count;
         }
 
-
         public static int CountLowerLetter(string word)
         {
             int count = 0;
+
             foreach (Char c in word)
                 if (char.IsLower(c))
                     count++;
@@ -30,13 +29,12 @@ namespace Fsd.Michal.Cs.Ex1
         public static int CountUpperLetters(string word)
         {
             int count = 0;
+
             foreach (Char c in word)
                 if (char.IsUpper(c))
                     count++;
 
             return count;
         }
-
-
     }
 }
