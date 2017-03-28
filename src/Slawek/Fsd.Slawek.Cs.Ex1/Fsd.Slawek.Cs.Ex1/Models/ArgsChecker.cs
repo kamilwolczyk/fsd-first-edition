@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 
 
-namespace Fsd.Slawek.Cs.Ex1
+namespace Fsd.Slawek.Cs.Ex1.Models
 {
     public static class ArgsChecker
     {
@@ -22,25 +22,25 @@ namespace Fsd.Slawek.Cs.Ex1
 
         public static string GetUpper(this string str)
         {
-            string result = "";
+            string result = null;
             str.Where(char.IsUpper).ToList().ForEach(s => result += s);
-            if (string.IsNullOrEmpty(result)) return $"<null>";
+            if (string.IsNullOrEmpty(result)) return $"<There is no upper letters>";
             return result;
         }
 
         public static string GetLower(this string str)
         {
-            string result = "";
+            string result = null;
             str.Where(char.IsLower).ToList().ForEach(s => result += s);
-            if (string.IsNullOrEmpty(result)) return $"<null>";
+            if (string.IsNullOrEmpty(result)) return $"<There is no lower letters>";
             return result;
         }
 
         public static string GetDigit(this string str)
         {
-            string result = "";
+            string result = null;
             str.Where(char.IsDigit).ToList().ForEach(s => result += s);
-            if (string.IsNullOrEmpty(result)) return $"<null>";
+            if (string.IsNullOrEmpty(result)) return $"<There is no digits>";
             return result;
         }
     }
