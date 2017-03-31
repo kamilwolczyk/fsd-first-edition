@@ -1,10 +1,4 @@
 ﻿using Fsd.Slawek.Cs.Ex3.Models;
-using Fsd.Slawek.Cs.Ex3.Models.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fsd.Slawek.Cs.Ex3
 {
@@ -12,7 +6,8 @@ namespace Fsd.Slawek.Cs.Ex3
     {
         static void Main(string[] args)
         {
-            DatabaseFile data = new DatabaseFile();
+            DatabaseFile data = new DatabaseFile(); //Baza z pliku
+            //Database data = new Database();       //Baza z klasy
             Presenter presenter = new Presenter(data);
             presenter.ShowMenu();
         }
