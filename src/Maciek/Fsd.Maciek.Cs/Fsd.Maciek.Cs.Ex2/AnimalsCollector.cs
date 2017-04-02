@@ -23,8 +23,8 @@ namespace Fsd.Maciek.Cs.Ex2
             {
                 Presenter.AskForNameOfAnimal(singularAnimalName);
                 string AnimalName = Presenter.GetNameOfAnimal();
-                Tparameter cat = (Tparameter)Activator.CreateInstance(typeof(Tparameter), AnimalName);
-                Animals.Add(cat);
+                Tparameter animalObject = (Tparameter)Activator.CreateInstance(typeof(Tparameter), AnimalName);
+                Animals.Add(animalObject);
             }
         }
     }
