@@ -9,6 +9,5 @@ namespace Fsd.Slawek.Cs.Ex3.Models.Interfaces
         void AddProduct(IProduct product, int count);
         void RemoveProduct(IProduct product);
         void EditProduct(IProduct product, int count);
-
     }
 }

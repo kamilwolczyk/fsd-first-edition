@@ -1,5 +1,4 @@
-﻿
-namespace Fsd.Slawek.Cs.Ex2.Models
+﻿namespace Fsd.Slawek.Cs.Ex2.Models
 {
     public class Cat : Animal, IAnimalVoice
     {
@@ -8,7 +7,5 @@ namespace Fsd.Slawek.Cs.Ex2.Models
         public Cat(string name) : base(name)
         {
         }
-        
-
     }
 }

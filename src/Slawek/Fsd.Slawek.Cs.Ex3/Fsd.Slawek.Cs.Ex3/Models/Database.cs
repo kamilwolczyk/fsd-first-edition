@@ -6,7 +6,7 @@ namespace Fsd.Slawek.Cs.Ex3.Models
 {
     public class Database: IDatabase
     {
-        public List<ProductInfo> Products { get; } = new List<ProductInfo>();
+        public List<ProductInfo> Products { get; }
 
         public Database()
         {
@@ -46,6 +46,5 @@ namespace Fsd.Slawek.Cs.Ex3.Models
             }
             Products[index] = new ProductInfo(product, count + itemCount);
         }
-
     }
 }

@@ -1,5 +1,4 @@
-﻿
-namespace Fsd.Slawek.Cs.Ex2.Models
+﻿namespace Fsd.Slawek.Cs.Ex2.Models
 {
     public interface IAnimalVoice
     {

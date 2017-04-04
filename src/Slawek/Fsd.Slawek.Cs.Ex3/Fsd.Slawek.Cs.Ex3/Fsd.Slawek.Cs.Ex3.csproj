@@ -48,10 +48,10 @@
     <Compile Include="Models\FileReader.cs" />
     <Compile Include="Models\Interfaces\IDatabase.cs" />
     <Compile Include="Models\Interfaces\IProduct.cs" />
-    <Compile Include="Models\Presenter.cs" />
+    <Compile Include="UI\Presenter.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductInfo.cs" />
-    <Compile Include="Models\UserService.cs" />
+    <Compile Include="UI\UserService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

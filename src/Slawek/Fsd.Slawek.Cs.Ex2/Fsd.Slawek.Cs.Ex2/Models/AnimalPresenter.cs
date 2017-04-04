@@ -7,9 +7,7 @@ namespace Fsd.Slawek.Cs.Ex2.Models
         public void IntroduceAnimal(Animal animal)
         {
             GetAnimalName(animal);
-
-            var myVoice = animal as IAnimalVoice;
-            GetAnimalVoice(myVoice);
+            GetAnimalVoice(animal as IAnimalVoice);
         }
 
         private void GetAnimalVoice(IAnimalVoice voice)

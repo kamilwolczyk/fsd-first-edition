@@ -19,14 +19,13 @@ namespace Fsd.Slawek.Cs.Ex3.Models
                 string[] split = line.Split(new[] { " \t" }, StringSplitOptions.None);
                 data.Add(new ProductInfo(new Product(split[0], decimal.Parse(split[1])), int.Parse(split[2])));
             }
-            file.Close();
 
+            file.Close();
             return data;
         }
 
         public void WriteData(List<ProductInfo> products)
         {
-            IList<ProductInfo> data = new List<ProductInfo>();
             StreamWriter file = new StreamWriter(Path);
 
             products.ForEach(d => file.WriteLine($"{d.Item.Name} \t {d.Item.Price} \t {d.Count}"));
@@ -37,12 +36,15 @@ namespace Fsd.Slawek.Cs.Ex3.Models
         {
             FileInfo fileExist = new FileInfo(Path);
             bool exist = fileExist.Exists;
-            if (!exist) File.Create(Path);
+
+            if (!exist)
+                File.Create(Path);
+
             StreamReader file = new StreamReader(Path);
             string line = null;
+
             line = file.ReadLine();
             file.Close();
-
             return line != null;
         }
     }

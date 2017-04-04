@@ -1,4 +1,5 @@
 ﻿using Fsd.Slawek.Cs.Ex3.Models;
+using Fsd.Slawek.Cs.Ex3.UI;
 
 namespace Fsd.Slawek.Cs.Ex3
 {
@@ -8,8 +9,8 @@ namespace Fsd.Slawek.Cs.Ex3
         {
             DatabaseFile data = new DatabaseFile(); //Baza z pliku
             //Database data = new Database();       //Baza z klasy
-            Presenter presenter = new Presenter(data);
-            presenter.ShowMenu();
+            Presenter presenter = new Presenter();
+            presenter.ShowMenu(data);
         }
     }
 }

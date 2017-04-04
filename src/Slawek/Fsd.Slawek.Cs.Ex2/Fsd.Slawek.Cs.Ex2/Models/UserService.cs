@@ -13,10 +13,10 @@ namespace Fsd.Slawek.Cs.Ex2.Models
             {
                 Console.Write($"How many {kind}s you want: ");
                 myNr = Console.ReadLine();
-                if (int.TryParse(myNr, out number)) break;
+                if (int.TryParse(myNr, out number))
+                    break;
                 Console.WriteLine("That's not valid number. Please try again: ");
             }
-
             return number;
         }
 
@@ -28,10 +28,10 @@ namespace Fsd.Slawek.Cs.Ex2.Models
             {
                 Console.Write($"Write name for {type}({number}): ");
                 myName = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(myName)) break;
+                if (!string.IsNullOrWhiteSpace(myName))
+                    break;
                 Console.WriteLine("That's not valid name. Please try again: ");
             }
-
             return myName.TrimEnd().TrimStart();
         }
     }

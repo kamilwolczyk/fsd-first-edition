@@ -12,7 +12,8 @@ namespace Fsd.Slawek.Cs.Ex3.Models
         public DatabaseFile()
         {
             Products = new List<ProductInfo>();
-            if (_file.FileCheck()) Products = _file.ReadData().ToList();
+            if (_file.FileCheck())
+                Products = _file.ReadData().ToList();
         }
 
         public void AddProduct(IProduct product, int count)
@@ -22,6 +23,7 @@ namespace Fsd.Slawek.Cs.Ex3.Models
                 EditProduct(product, count);
                 return;
             }
+
             Products.Add(new ProductInfo(product, count));
             _file.WriteData(Products);
         }
@@ -30,11 +32,13 @@ namespace Fsd.Slawek.Cs.Ex3.Models
         {
             int index = Products.FindIndex(t => t.Item.Name == product.Name);
             int itemCount = Products[index].Count;
+
             if (count + itemCount == 0)
             {
                 RemoveProduct(product);
                 return;
             }
+
             Products[index] = new ProductInfo(product, count + itemCount);
             _file.WriteData(Products);
         }
@@ -42,8 +46,8 @@ namespace Fsd.Slawek.Cs.Ex3.Models
         public void RemoveProduct(IProduct product)
         {
             var del = Products.FirstOrDefault(t => t.Item.Name == product.Name);
+
             Products.Remove(del);
-            
             _file.WriteData(Products);
         }
     }

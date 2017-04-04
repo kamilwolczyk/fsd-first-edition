@@ -16,7 +16,6 @@ namespace Fsd.Slawek.Cs.Ex2
             animals.ToList().ForEach(a => animalPresenter.IntroduceAnimal(a));
             
             Console.ReadKey();
-
         }
     }
 }

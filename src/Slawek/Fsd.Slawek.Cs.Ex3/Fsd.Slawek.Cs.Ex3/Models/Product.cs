@@ -12,6 +12,5 @@ namespace Fsd.Slawek.Cs.Ex3.Models
             Name = name;
             Price = price;
         }
-        
     }
 }
