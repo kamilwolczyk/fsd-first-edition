@@ -24,15 +24,13 @@ namespace Fsd.Slawek.Cs.Ex3.Models
             return data;
         }
 
-        public IEnumerable<ProductInfo> WriteData(List<ProductInfo> products)
+        public void WriteData(List<ProductInfo> products)
         {
             IList<ProductInfo> data = new List<ProductInfo>();
             StreamWriter file = new StreamWriter(Path);
 
             products.ForEach(d => file.WriteLine($"{d.Item.Name} \t {d.Item.Price} \t {d.Count}"));
             file.Close();
-
-            return data;
         }
 
         public bool FileCheck()
