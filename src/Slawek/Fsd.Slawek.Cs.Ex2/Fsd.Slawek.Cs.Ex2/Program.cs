@@ -13,7 +13,7 @@ namespace Fsd.Slawek.Cs.Ex2
             AnimalPresenter animalPresenter = new AnimalPresenter();
 
             IEnumerable<Animal> animals = animalGenerator.GetAllAnimals();
-            animals.ToList().ForEach(a => animalPresenter.IntroduceAnimal(a));
+            animals.ToList().ForEach(a => Console.Write(animalPresenter.IntroduceAnimal(a)));
             
             Console.ReadKey();
         }

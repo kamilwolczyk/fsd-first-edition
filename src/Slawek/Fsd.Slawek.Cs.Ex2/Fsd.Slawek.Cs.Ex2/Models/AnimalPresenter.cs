@@ -4,21 +4,22 @@ namespace Fsd.Slawek.Cs.Ex2.Models
 {
     public class AnimalPresenter
     {
-        public void IntroduceAnimal(Animal animal)
+        public string IntroduceAnimal(Animal animal)
         {
-            GetAnimalName(animal);
-            GetAnimalVoice(animal as IAnimalVoice);
+            return (GetAnimalName(animal) + GetAnimalVoice(animal as IAnimalVoice));
         }
 
-        private void GetAnimalVoice(IAnimalVoice voice)
+        private string GetAnimalVoice(IAnimalVoice voice)
         {
-            if (voice == null) Console.WriteLine("<no voice>");
-            Console.WriteLine(voice.Voice); 
+            if (voice == null)
+                return "<no voice> \n";
+
+            return $"{voice.Voice}.\n"; 
         }
 
-        private void GetAnimalName(Animal animal)
+        private string GetAnimalName(Animal animal)
         {
-            Console.Write($"Hello my name is {animal.Name}. ");
+            return $"Hello my name is {animal.Name}. ";
         }
     }
 }
