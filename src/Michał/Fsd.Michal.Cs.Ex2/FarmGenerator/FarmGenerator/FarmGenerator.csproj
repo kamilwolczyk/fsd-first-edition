@@ -45,6 +45,7 @@
     <Compile Include="GetUserData.cs" />
     <Compile Include="Models\Cow.cs" />
     <Compile Include="Models\Sheep.cs" />
+    <Compile Include="Models\Voice.cs" />
     <Compile Include="ShowData.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Cat.cs" />

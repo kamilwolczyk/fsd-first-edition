@@ -1,6 +1,4 @@
 ﻿using FarmGenerator.Interfaces;
-using FarmGenerator.Models;
-using System.Collections.Generic;
 
 namespace FarmGenerator
 {
@@ -8,11 +6,12 @@ namespace FarmGenerator
     {
         static void Main(string[] args)
         {
-            ShowData.ShowIntroduction();
-            List<Animal> animalList = new List<Animal>();
-            GetUserData.GetInput(animalList);
-            ShowData.ShowAnimals(animalList);
-            GetUserData.WaitForUser();
+            Presenter.ShowIntroduction();
+
+            var animals = AnimalCreator.ZooCreator();
+
+            AnimalPresenter.AnimalsGiveVoice(animals);
+            Presenter.WaitForUser();
         }
     }
 }

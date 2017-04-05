@@ -9,8 +9,6 @@
             Name = name;
         }
 
-        public abstract string GiveSound();
-
         public string SayHello()
         {
             return $"hello, my name is: {Name}";

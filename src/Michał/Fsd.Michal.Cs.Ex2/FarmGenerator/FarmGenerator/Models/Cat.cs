@@ -1,16 +1,17 @@
-﻿namespace FarmGenerator.Models
+﻿using System;
+
+namespace FarmGenerator.Models
 {
-    class Cat : Animal 
+    class Cat : Animal, IVoice
     {
         public Cat(string name)
             : base(name)
         {
-
         }
 
-        public override string GiveSound()
+        public void IGiveVoice()
         {
-            return "miał";
+            Console.WriteLine($"{Name} : Miał");
         }
     }
 }
