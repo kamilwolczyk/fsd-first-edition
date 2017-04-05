@@ -42,14 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetUserData.cs" />
+    <Compile Include="AnimalCreator.cs" />
     <Compile Include="Models\Cow.cs" />
     <Compile Include="Models\Sheep.cs" />
-    <Compile Include="Models\Voice.cs" />
-    <Compile Include="ShowData.cs" />
+    <Compile Include="Interface\IVoice.cs" />
+    <Compile Include="AnimalPresenter.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Cat.cs" />
     <Compile Include="Models\Dog.cs" />
+    <Compile Include="Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
