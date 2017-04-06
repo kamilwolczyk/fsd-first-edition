@@ -1,8 +1,7 @@
-﻿using FarmGenerator.Models;
-using System;
+﻿using FarmGenerator.Interfaces;
 using System.Collections.Generic;
 
-namespace FarmGenerator.Interfaces
+namespace FarmGenerator
 {
     class AnimalPresenter
     {

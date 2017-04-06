@@ -1,6 +1,4 @@
-﻿using FarmGenerator.Interfaces;
-
-namespace FarmGenerator
+﻿namespace FarmGenerator
 {
     class Program
     {

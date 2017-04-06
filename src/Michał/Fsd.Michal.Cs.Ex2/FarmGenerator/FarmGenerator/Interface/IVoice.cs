@@ -1,4 +1,4 @@
-﻿namespace FarmGenerator.Models
+﻿namespace FarmGenerator.Interfaces
 {
     public interface IVoice
     {
