@@ -2,6 +2,6 @@
 {
     public interface IVoice
     {
-      void IGiveVoice();
+      string IGiveVoice();
     }
 }

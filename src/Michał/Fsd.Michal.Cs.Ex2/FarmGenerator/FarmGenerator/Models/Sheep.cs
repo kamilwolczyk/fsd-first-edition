@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarmGenerator.Interfaces;
+using System;
 
 namespace FarmGenerator.Models
 {
@@ -8,10 +9,10 @@ namespace FarmGenerator.Models
             : base(name)
         {
         }
-
-        public void IGiveVoice()
+       
+        public string IGiveVoice()
         {
-            Console.WriteLine($"{Name} : Beee");
+            return $"{Name} : Beee";
         }
     }
 }

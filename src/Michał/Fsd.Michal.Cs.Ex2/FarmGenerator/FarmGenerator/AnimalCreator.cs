@@ -11,10 +11,10 @@ namespace FarmGenerator
         {
             List<IVoice> animals = new List<IVoice>();
 
-            animals.AddRange(AnimalGenerator<Cow>("", "cows"));
-            animals.AddRange(AnimalGenerator<Dog>("", "dogs"));
-            animals.AddRange(AnimalGenerator<Cat>("", "cats"));
-            animals.AddRange(AnimalGenerator<Sheep>("", "sheeps"));
+            animals.AddRange(AnimalGenerator<Cow>(string.Empty, "cows"));
+            animals.AddRange(AnimalGenerator<Dog>(string.Empty, "dogs"));
+            animals.AddRange(AnimalGenerator<Cat>(string.Empty, "cats"));
+            animals.AddRange(AnimalGenerator<Sheep>(string.Empty, "sheeps"));
 
             return animals;
         }

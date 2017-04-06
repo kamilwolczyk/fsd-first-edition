@@ -1,5 +1,6 @@
 ﻿using FarmGenerator.Interfaces;
 using System.Collections.Generic;
+using System;
 
 namespace FarmGenerator
 {
@@ -8,9 +9,7 @@ namespace FarmGenerator
         public static void AnimalsGiveVoice(List<IVoice> animals)
         {
             foreach (IVoice animal in animals)
-            {
-                animal.IGiveVoice();
-            }
+                Console.WriteLine(animal.IGiveVoice());
         }
     }
 }
