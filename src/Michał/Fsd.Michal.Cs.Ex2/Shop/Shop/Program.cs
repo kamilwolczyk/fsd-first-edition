@@ -5,8 +5,7 @@
         static void Main(string[] args)
         {
             Warehouse warehouse = new Warehouse();
-            Sell seller = new Sell();
-           
+            Seller seller = new Seller();
             seller.CustomerService(warehouse);
         }
     }

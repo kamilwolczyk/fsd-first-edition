@@ -8,43 +8,39 @@ namespace Shop
     {
         private List<Product> _products;
 
+        internal List<Product> Products { get => _products; set => _products = value; }
+
         public Warehouse()
         {
             _products = new List<Product>();
         }
 
-        internal void AddProduct(Product product)
+        public void AddProduct()
         {
-            product = new Product();
             Console.Clear();
-            Console.Write("Name: ");
-            string name = Console.ReadLine();
+            Product product = new Product();
+            string name = WarehousePresenter.GetInput("Name: ");
 
-            if (!IsProductExist(name))
+            if (!IsProductCreated(name))
             {
                 product.ProductName = name;
-
-                Console.Write("Count: ");
-                int count = Convert.ToInt32(Console.ReadLine());
+                int count = WarehousePresenter.GetIntInput("Count: ");
                 product.ProductCount = count;
 
-                Console.Write("Price: ");
-                double price = Convert.ToDouble(Console.ReadLine());
+                double price = WarehousePresenter.GetDoubleInput();
                 product.ProductPrice = price;
 
                 _products.Add(product);
-
             }
             else
             {
                 Product p = FindProduct(name);
-                Console.WriteLine("count:");
-                int count = Convert.ToInt32(Console.ReadLine());
+                int count = WarehousePresenter.GetIntInput("Count: ");
                 p.ProductCount += count;
             }
         }
 
-        internal int Count()
+        public int Count()
         {
             return _products.Count();
         }
@@ -54,50 +50,30 @@ namespace Shop
             return _products.FirstOrDefault(product => product.ProductName == name);
         }
 
-        internal bool IsProductExist(string name)
+        public bool IsProductCreated(string name)
         {
-            foreach (Product product in _products)
-            {
-                if (product.ProductName == name)
-                    return true;
-            }
-            return false;
+            return _products.Any(product => product.ProductName == name);
         }
 
-        internal void ShowProducts()
-        {
-            Console.WriteLine("{0,40}", "PRODUCTS");
-            Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("|{0,25}|{1,5}|{2,5}|", "Name", "Price", "Count");
-
-            foreach (Product product in _products)
-            {
-                Console.WriteLine("|{0,25}|{1,5}|{2,5}|", product.ProductName, product.ProductPrice, product.ProductCount);
-            }
-        }
-
-        internal void RemoveProduct(Product p)
+        private void RemoveProduct(Product p)
         {
             _products.Remove(p);
         }
 
-        internal void BuyProduct()
+        public void BuyProduct()
         {
             Console.Clear();
-            Console.WriteLine("What do you wan't to buy?");
-            string name = Console.ReadLine();
+            string name = WarehousePresenter.GetInput("What do you wan't to buy?");
 
-            if (!IsProductExist(name))
+            if (!IsProductCreated(name))
             {
-                Console.Clear();
-                Console.WriteLine($"such product didn't exist in system");
+                WarehousePresenter.ShowMessage("such product didn't exist in system");
             }
             else
             {
                 Product p = FindProduct(name);
-                Console.WriteLine("how many do you want to buy ?");
+                int count = WarehousePresenter.GetIntInput("how many do you want to buy ?");
 
-                int count = Convert.ToInt32(Console.ReadLine());
                 if (count <= p.ProductCount)
                 {
                     p.ProductCount -= count;
@@ -108,7 +84,7 @@ namespace Shop
                 }
                 else
                 {
-                    Console.WriteLine($"You could only buy {p.ProductCount} , try again");
+                    WarehousePresenter.ShowMessage($"You could only buy {p.ProductCount} , try again");
                 }
             }
         }
