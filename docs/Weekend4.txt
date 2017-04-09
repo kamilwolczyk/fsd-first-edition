@@ -1,0 +1,14 @@
+﻿1. sobota 22.04.2017
+a) Przesyłanie informacji z klienta do serwera - mechanizm Post-Back
+ - utworzyć formularz rejestracji nowego użytkownika z imie|nazwisko|adres|login|email|hasło|powtórzenie hasła
+ - objaśnić request zwrotny postback
+ - odebrać dane
+b)
+c)
+d)
+
+2. Niedziela 23.04.2017
+a) 
+b)
+c)
+d)
