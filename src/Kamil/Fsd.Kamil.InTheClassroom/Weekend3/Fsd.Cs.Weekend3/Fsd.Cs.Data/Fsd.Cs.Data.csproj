@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9346AA39-E0BC-4A25-8F3F-4A1778CB0245}</ProjectGuid>
+    <ProjectGuid>{E997753D-E7C9-4C6F-A65E-ED3B54FC791F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fsd.Cs.Services</RootNamespace>
-    <AssemblyName>Fsd.Cs.Services</AssemblyName>
+    <RootNamespace>Fsd.Cs.Data</RootNamespace>
+    <AssemblyName>Fsd.Cs.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,16 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cars\MockCarService.cs" />
-    <Compile Include="Cars\ICarService.cs" />
-    <Compile Include="Date\DateTimeService.cs" />
+    <Compile Include="Entities\Car.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Fsd.Cs.Data\Fsd.Cs.Data.csproj">
-      <Project>{e997753d-e7c9-4c6f-a65e-ed3b54fc791f}</Project>
-      <Name>Fsd.Cs.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Cs.Web", "Fsd.Cs.Web\Fs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Cs.Services", "Fsd.Cs.Services\Fsd.Cs.Services.csproj", "{9346AA39-E0BC-4A25-8F3F-4A1778CB0245}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Cs.Data", "Fsd.Cs.Data\Fsd.Cs.Data.csproj", "{E997753D-E7C9-4C6F-A65E-ED3B54FC791F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9346AA39-E0BC-4A25-8F3F-4A1778CB0245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9346AA39-E0BC-4A25-8F3F-4A1778CB0245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9346AA39-E0BC-4A25-8F3F-4A1778CB0245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E997753D-E7C9-4C6F-A65E-ED3B54FC791F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E997753D-E7C9-4C6F-A65E-ED3B54FC791F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E997753D-E7C9-4C6F-A65E-ED3B54FC791F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E997753D-E7C9-4C6F-A65E-ED3B54FC791F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

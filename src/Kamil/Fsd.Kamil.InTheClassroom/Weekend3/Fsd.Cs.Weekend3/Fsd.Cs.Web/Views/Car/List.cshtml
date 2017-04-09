@@ -1,0 +1,45 @@
+﻿@model CarListModel
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    thead {
+        background-color: aquamarine;
+    }
+
+    td{
+        padding: 5px;
+    }
+</style>
+
+<h1>@Model.Title :</h1>
+
+<table id="car-list">
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Power</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CarModel car in Model.Cars)
+        {
+            <tr>
+                <td>@car.Mark</td>
+                <td>@car.Model</td>
+                <td>@car.Power KM</td>
+                <td>@car.Price zł</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

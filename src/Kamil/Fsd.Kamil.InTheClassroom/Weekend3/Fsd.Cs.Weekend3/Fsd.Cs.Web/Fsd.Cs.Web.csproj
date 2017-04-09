@@ -141,13 +141,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\DateController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\MathController.cs" />
     <Compile Include="Controllers\MyActionTestController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CarListModel.cs" />
+    <Compile Include="Models\CarModel.cs" />
+    <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,12 +189,13 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Math\Add.cshtml" />
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Car\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Views\Date\" />
     <Folder Include="Views\HelloWorld\" />
-    <Folder Include="Views\Math\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +214,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Fsd.Cs.Data\Fsd.Cs.Data.csproj">
+      <Project>{e997753d-e7c9-4c6f-a65e-ed3b54fc791f}</Project>
+      <Name>Fsd.Cs.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fsd.Cs.Services\Fsd.Cs.Services.csproj">
       <Project>{9346aa39-e0bc-4a25-8f3f-4a1778cb0245}</Project>
       <Name>Fsd.Cs.Services</Name>
