@@ -1,0 +1,52 @@
+﻿@model ProductList
+
+@{
+    ViewBag.Title = "Products";
+
+    int pages = Model.Total / Model.Max;
+
+    if (Model.Total % Model.Max != 0)
+    {
+        pages += 1;
+    }
+}
+<h2>List of products</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producer</th>
+            <th>Model</th>
+            <th>Type</th>
+            <th>Production Date</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+@foreach (var item in Model.ProductsList)
+{
+    <tr>
+        <td>@item.Producer</td>
+        <td>@item.Model</td>
+        <td>@item.Type</td>
+        <td>@item.ProductionDate.ToShortDateString()</td>
+        <td>@item.Price zł</td>
+    </tr>
+}
+    
+        <tr>
+            <td colspan="4">
+                Page:
+               @for (int x = 1; x <= pages; x++)
+               {
+                   if (x != Model.Page)
+                   {
+                       @Html.RouteLink(x.ToString(), "Product", new { page = x, items = Model.Max });
+                       continue;
+                   }
+                   @x.ToString();
+               }
+            </td>
+            <td>Total items: @Model.Total</td>
+        </tr>
+</table>
