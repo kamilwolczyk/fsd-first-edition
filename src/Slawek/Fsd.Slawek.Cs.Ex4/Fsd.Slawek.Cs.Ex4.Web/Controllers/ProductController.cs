@@ -32,7 +32,8 @@ namespace Fsd.Slawek.Cs.Ex4.Web.Controllers
                     Model = one.Model,
                     Type = one.Type,
                     ProductionDate = one.ProductionDate,
-                    Price = one.Price
+                    Price = one.Price,
+                    Index = itemsBase.ToList().IndexOf(one)
                 })
             };
             return View(model);

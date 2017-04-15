@@ -14,5 +14,7 @@ namespace Fsd.Slawek.Cs.Ex4.Web.Models
         public DateTime ProductionDate { get; set; }
 
         public decimal Price { get; set; }
+
+        public int Index { get; set; }
     }
 }
