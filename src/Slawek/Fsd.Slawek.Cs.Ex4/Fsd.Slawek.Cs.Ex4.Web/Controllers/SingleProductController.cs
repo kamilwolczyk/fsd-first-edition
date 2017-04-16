@@ -11,7 +11,7 @@ namespace Fsd.Slawek.Cs.Ex4.Web.Controllers
 {
     public class SingleProductController : Controller
     {
-        MemoryProductService _productService;
+        IProductService _productService;
 
         public SingleProductController()
         {

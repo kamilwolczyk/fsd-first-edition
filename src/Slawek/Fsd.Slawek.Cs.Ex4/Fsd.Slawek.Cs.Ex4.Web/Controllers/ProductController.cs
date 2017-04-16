@@ -9,7 +9,7 @@ namespace Fsd.Slawek.Cs.Ex4.Web.Controllers
 {
     public class ProductController : Controller
     {
-        MemoryProductService _productService;
+        IProductService _productService;
 
         public ProductController()
         {
@@ -25,7 +25,7 @@ namespace Fsd.Slawek.Cs.Ex4.Web.Controllers
                 Max = items,
                 Page = page,
                 Total = itemsBase.Count(),
-                ProductsList = _productService.GetAllProducts().Skip((page -1) *items).Take(items).Select(one =>
+                ProductsList = itemsBase.Skip((page -1) *items).Take(items).Select(one =>
                 new ProductModel
                 {
                     Producer = one.Producer,
