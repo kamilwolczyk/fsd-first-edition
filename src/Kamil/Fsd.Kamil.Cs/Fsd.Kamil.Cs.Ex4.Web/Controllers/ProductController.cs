@@ -10,11 +10,11 @@ namespace Fsd.Kamil.Cs.Ex4.Web.Controllers
 {
     public class ProductController : Controller
     {
-        private MockProductService _productService;
+        private IProductService _productService;
 
-        public ProductController()
+        public ProductController(IProductService productService)
         {
-            _productService = new MockProductService();
+            _productService = productService;
         }
 
         public ActionResult List(int? page, int? items)
