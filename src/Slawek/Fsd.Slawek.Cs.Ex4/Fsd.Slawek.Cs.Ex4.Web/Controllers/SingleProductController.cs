@@ -22,7 +22,7 @@ namespace Fsd.Slawek.Cs.Ex4.Web.Controllers
         {
             var product = new SingleProduct<ProductBase>();
 
-            product = product.GetInfo(_productService.GetAllProducts().ToList()[index]);
+            product = product.GetInfo(_productService.GetProduct(index));
 
             return View(product);
         }

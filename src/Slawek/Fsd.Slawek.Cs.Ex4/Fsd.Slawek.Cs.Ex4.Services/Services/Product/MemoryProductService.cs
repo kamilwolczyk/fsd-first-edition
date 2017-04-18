@@ -6,7 +6,7 @@ namespace Fsd.Slawek.Cs.Ex4.Services.Services.Product
 {
     public class MemoryProductService : IProductService
     {
-        private IEnumerable<ProductBase> _products = new List<ProductBase>
+        private IReadOnlyList<ProductBase> _products = new List<ProductBase>
         {
             new Motherboard("MSI", "B250M PRO-VDH", new DateTime(2016,04,04), 324, "Intel B250", "Socket 1151"),
             new Motherboard("Gigabyte", "GA-B250M-D3H", new DateTime(2016,06,12), 420, "Intel B250", "Socket 1151"),
@@ -26,5 +26,8 @@ namespace Fsd.Slawek.Cs.Ex4.Services.Services.Product
 
         public IEnumerable<ProductBase> GetAllProducts()
            => _products;
+
+        public ProductBase GetProduct(int index)
+           => _products[index];
     }
 }
