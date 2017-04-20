@@ -17,7 +17,7 @@ namespace Fsd.Maciek.Cs.Ex4.Web.Controllers
 
         public ActionResult Index(int page = 1, int items = 20)
         {
-            ProductListWebModel ProductModel = new ProductListWebModel()
+            ProductListWebModel productModel = new ProductListWebModel()
             {
                 Products = ProductService.GetListOfProducts().ToList()
                     .Skip((page - 1) * items).Take(items)
@@ -31,7 +31,7 @@ namespace Fsd.Maciek.Cs.Ex4.Web.Controllers
                     })
             };
 
-            return View(ProductModel);
+            return View(productModel);
         }
     }
 }

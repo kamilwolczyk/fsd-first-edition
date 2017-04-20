@@ -9,9 +9,9 @@ namespace Fsd.Maciek.Cs.Ex4.Web.Controllers
     {
         public ActionResult Index()
         {
-            MockProductService ProductService = new MockProductService();
-            List<Product> ListofProducts = (List<Product>)ProductService.GetListOfProducts();
-            int numberOfProducts = ListofProducts.Count;
+            MockProductService productService = new MockProductService();
+            List<Product> listofProducts = (List<Product>)productService.GetListOfProducts();
+            int numberOfProducts = listofProducts.Count;
 
             return View(numberOfProducts);
         }
