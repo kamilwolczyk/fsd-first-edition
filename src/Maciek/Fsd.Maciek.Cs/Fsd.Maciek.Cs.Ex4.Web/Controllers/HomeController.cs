@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using Fsd.Maciek.Cs.Ex4.Data.Models;
+using Fsd.Maciek.Cs.Ex4.Services;
 
 namespace Fsd.Maciek.Cs.Ex4.Web.Controllers
 {
@@ -10,21 +9,11 @@ namespace Fsd.Maciek.Cs.Ex4.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
+            MockProductService ProductService = new MockProductService();
+            List<Product> ListofProducts = (List<Product>)ProductService.GetListOfProducts();
+            int numberOfProducts = ListofProducts.Count;
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(numberOfProducts);
         }
     }
 }
