@@ -1,4 +1,5 @@
-﻿using Fsd.Data.Entities.Users;
+﻿using Fsd.Data.Db;
+using Fsd.Data.Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,16 @@ namespace Fsd.Ui.Console
     {
         static void Main(string[] args)
         {
-            Person x = new Person();
+            var context = new ShopContext();
+
+            context.Persons.Add(new Person
+            {
+                FirstName = "Kamil",
+                LastName = "Wołczyk",
+                EmailAddress = "k.wolczyk@headchannel.co.uk"
+            });
+
+            context.SaveChanges();
         }
     }
 }
