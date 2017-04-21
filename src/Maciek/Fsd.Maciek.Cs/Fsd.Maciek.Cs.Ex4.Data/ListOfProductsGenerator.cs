@@ -10,7 +10,7 @@ namespace Fsd.Maciek.Cs.Ex4.Data
 
         public ListOfProductsGenerator()
         {
-            IEnumerable<Product> _listOfProducts = new List<Product>()
+            ListOfProducts = new List<Product>()
             {
                 new Product("Honda","Civic",89000,2008,ProductType.Car),
                 new Product("Mercedes","E-class",289000,2016,ProductType.Car),
@@ -33,8 +33,6 @@ namespace Fsd.Maciek.Cs.Ex4.Data
                 new Product("DC","The Space Echo",2999,2017,ProductType.Snowboard),
                 new Product("LibTech","Skate Banana",2499,2013,ProductType.Snowboard),
             };
-
-            ListOfProducts = _listOfProducts;
         }
 
         public IEnumerable<Product> GetListOfProducts()
