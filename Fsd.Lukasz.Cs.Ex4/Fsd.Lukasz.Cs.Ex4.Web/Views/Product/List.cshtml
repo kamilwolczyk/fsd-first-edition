@@ -1,0 +1,35 @@
+﻿@using Fsd.Lukasz.Cs.Ex4.Web.Models
+@using PagedList.Mvc;
+@using PagedList;
+@model  ProductView
+
+<br />
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Producent</th>
+            <th>Model</th>
+            <th>Typ</th>
+            <th>Data Produkcji</th>
+            <th>Cena</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var product in Model.Products)
+            {
+            <tr>
+                <td>@product.Producer</td>
+                <td>@product.Model</td>
+                <td>@product.Type</td>
+                <td>@product.ProductionDate.ToString("yyyy")</td>
+                <td>@product.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    Page @(Model.Products.PageCount < Model.Products.PageNumber ? 0 : Model.Products.PageNumber)  of @Model.Products.PageCount
+    @Html.PagedListPager(Model.Products, page => Url.Action("List", "Product", new { page }))
+</div>

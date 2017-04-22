@@ -1,0 +1,5 @@
+C:\Users\vorko\Documents\PROGRAMOWANIE_KURS\fsd-first-edition\Fsd.Lukasz.Cs.Ex4\Fsd.Lukasz.Cs.Ex4.Data\bin\Debug\Fsd.Lukasz.Cs.Ex4.Data.dll
+C:\Users\vorko\Documents\PROGRAMOWANIE_KURS\fsd-first-edition\Fsd.Lukasz.Cs.Ex4\Fsd.Lukasz.Cs.Ex4.Data\bin\Debug\Fsd.Lukasz.Cs.Ex4.Data.pdb
+C:\Users\vorko\Documents\PROGRAMOWANIE_KURS\fsd-first-edition\Fsd.Lukasz.Cs.Ex4\Fsd.Lukasz.Cs.Ex4.Data\obj\Debug\Fsd.Lukasz.Cs.Ex4.Data.csprojResolveAssemblyReference.cache
+C:\Users\vorko\Documents\PROGRAMOWANIE_KURS\fsd-first-edition\Fsd.Lukasz.Cs.Ex4\Fsd.Lukasz.Cs.Ex4.Data\obj\Debug\Fsd.Lukasz.Cs.Ex4.Data.dll
+C:\Users\vorko\Documents\PROGRAMOWANIE_KURS\fsd-first-edition\Fsd.Lukasz.Cs.Ex4\Fsd.Lukasz.Cs.Ex4.Data\obj\Debug\Fsd.Lukasz.Cs.Ex4.Data.pdb
