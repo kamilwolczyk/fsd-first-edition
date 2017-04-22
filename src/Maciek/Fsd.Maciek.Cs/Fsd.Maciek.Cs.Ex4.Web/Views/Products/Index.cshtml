@@ -1,0 +1,33 @@
+﻿@model ProductListWebModel
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Production Year</th>
+        <th>ProductType</th>
+    </tr>
+
+    @foreach (ProductWebModel item in Model.Products)
+    {
+        <tr>
+            <td>@item.Manufacturer</td>
+            <td>@item.Model</td>
+            <td>@item.Price</td>
+            <td>@item.ProductionYear</td>
+            <td>@item.ProductType</td>
+        </tr>
+    }
+</table>
