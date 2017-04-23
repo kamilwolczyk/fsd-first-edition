@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E936A588-5582-4D7A-AE80-C83205C4DD3B}</ProjectGuid>
+    <ProjectGuid>{AA7F7CB8-BC47-480A-876F-D4011720D8C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fsd.Kamil.Cs.Ex4.Services</RootNamespace>
-    <AssemblyName>Fsd.Kamil.Cs.Ex4.Services</AssemblyName>
+    <RootNamespace>Fsd.Cs.Data</RootNamespace>
+    <AssemblyName>Fsd.Cs.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,15 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Products\IProductService.cs" />
-    <Compile Include="Products\MockProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Fsd.Kamil.Cs.Ex4.Data\Fsd.Kamil.Cs.Ex4.Data.csproj">
-      <Project>{4b0b66ea-5957-497f-98d6-c86eaa59640d}</Project>
-      <Name>Fsd.Kamil.Cs.Ex4.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

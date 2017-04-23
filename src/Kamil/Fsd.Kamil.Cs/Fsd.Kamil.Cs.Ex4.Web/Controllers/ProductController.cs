@@ -17,12 +17,15 @@ namespace Fsd.Kamil.Cs.Ex4.Web.Controllers
             _productService = productService;
         }
 
+        [HttpGet]
         public ActionResult List(int? page, int? items)
         {
             int take = items ?? 10;
             int skip = page.HasValue ? (page.Value - 1) * take : 0;
 
-            IEnumerable<ProductBase> entities = _productService.GetAllProducts().OrderByDescending(product => product.ProductionDate);
+            IEnumerable<ProductBase> entities = _productService
+                .GetAllProducts()
+                .OrderByDescending(product => product.ProductionDate);
 
             DataPart<ProductModel> model = DataPart<ProductModel>.GetPartFromEntities(entities, skip, take,
                 entity => new ProductModel
@@ -35,6 +38,30 @@ namespace Fsd.Kamil.Cs.Ex4.Web.Controllers
                 });
 
             return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View(new ProductModel());
+        }
+
+        [HttpPost]
+        public ActionResult Create(ProductModel product)
+        {
+            return View(product);
+        }
+
+        [HttpGet]
+        public ActionResult Edit()
+        {
+            return View(new ProductModel());
+        }
+
+        [HttpPost]
+        public ActionResult Edit(ProductModel product)
+        {
+            return View(product);
         }
     }
 }

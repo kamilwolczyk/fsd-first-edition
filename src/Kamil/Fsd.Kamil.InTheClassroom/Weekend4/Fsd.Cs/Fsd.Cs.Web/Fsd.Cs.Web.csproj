@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0D6A1372-B818-4705-B9C8-E7CABD859D6A}</ProjectGuid>
+    <ProjectGuid>{C673FC44-BA5D-45A8-B764-3CCC5B15CC7A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fsd.Kamil.Cs.Ex4.Web</RootNamespace>
-    <AssemblyName>Fsd.Kamil.Cs.Ex4.Web</AssemblyName>
+    <RootNamespace>Fsd.Cs.Web</RootNamespace>
+    <AssemblyName>Fsd.Cs.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -148,14 +148,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Extensions\KamilExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Pageable\DataPart.cs" />
-    <Compile Include="Models\Products\ProductModel.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\PageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\PasswordValidatorAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -190,12 +192,16 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Shared\_LayoutSmall.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Product\List.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\SaveSuccess.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\AdsPanel.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
@@ -212,13 +218,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fsd.Kamil.Cs.Ex4.Data\Fsd.Kamil.Cs.Ex4.Data.csproj">
-      <Project>{4b0b66ea-5957-497f-98d6-c86eaa59640d}</Project>
-      <Name>Fsd.Kamil.Cs.Ex4.Data</Name>
+    <ProjectReference Include="..\Fsd.Cs.Data\Fsd.Cs.Data.csproj">
+      <Project>{aa7f7cb8-bc47-480a-876f-d4011720d8c5}</Project>
+      <Name>Fsd.Cs.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Fsd.Kamil.Cs.Ex4.Services\Fsd.Kamil.Cs.Ex4.Services.csproj">
-      <Project>{e936a588-5582-4d7a-ae80-c83205c4dd3b}</Project>
-      <Name>Fsd.Kamil.Cs.Ex4.Services</Name>
+    <ProjectReference Include="..\Fsd.Cs.Services\Fsd.Cs.Services.csproj">
+      <Project>{5afe8a91-82e5-46aa-a1da-94002bc2b470}</Project>
+      <Name>Fsd.Cs.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -235,14 +241,14 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50460</DevelopmentServerPort>
+          <DevelopmentServerPort>57338</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50460/</IISUrl>
+          <IISUrl>http://localhost:57338/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://weekend4.dev</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
