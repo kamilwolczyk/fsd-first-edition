@@ -41,8 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentService.cs" />
+    <Compile Include="CustomerService.cs" />
     <Compile Include="IContentService.cs" />
+    <Compile Include="ICustomerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fsd.Cs.Data\Fsd.Cs.Data.csproj">
+      <Project>{aa7f7cb8-bc47-480a-876f-d4011720d8c5}</Project>
+      <Name>Fsd.Cs.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,6 +12,7 @@ namespace Fsd.Cs.Web
             var builder = new ContainerBuilder();
 
             builder.RegisterType<ContentService>().As<IContentService>().InstancePerLifetimeScope();
+            builder.RegisterType<CustomerService>().As<ICustomerService>().InstancePerLifetimeScope();
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             var container = builder.Build();

@@ -6,6 +6,8 @@ namespace Fsd.Cs.Web.Models
 {
     public class CustomerModel
     {
+        public int Id { get; set; }
+
         [DisplayName("Imię")]
         public string FirstName { get; set; }
 

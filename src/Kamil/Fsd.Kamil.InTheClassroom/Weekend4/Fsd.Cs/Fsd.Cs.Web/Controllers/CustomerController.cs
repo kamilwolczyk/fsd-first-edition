@@ -1,33 +1,49 @@
-﻿using Fsd.Cs.Web.Models;
+﻿using Fsd.Cs.Data.Entities;
+using Fsd.Cs.Services;
+using Fsd.Cs.Web.Models;
 using System;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace Fsd.Cs.Web.Controllers
 {
     public class CustomerController : Controller
     {
-        [HttpGet]
-        public ActionResult Index()
+        private ICustomerService _customerService;
+
+        public CustomerController(ICustomerService customerService)
         {
-            CustomerModel customer1 = new CustomerModel
+            _customerService = customerService;
+        }
+
+        [HttpGet]
+        public ActionResult List()
+        {
+            CustomerListModel model = new CustomerListModel
             {
-                FirstName = "Kamil2",
-                LastName = "Wołczyk",
-                Email = "k.wolczyk@headchannel.co.uk",
-                Age = 28,
-                Password = "nicTuNIeMa;p"
+                Customers = _customerService.GetAllCustomers().Select(MapCustomerToModel)
             };
 
-            return View(customer1);
+            return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int customerId)
+        {
+            CustomerModel customerModel = _customerService.GetAllCustomers()
+                .Where(customer => customer.Id == customerId)
+                .Select(MapCustomerToModel)
+                .First();
+
+            return View(customerModel);
         }
 
         [HttpPost]
-        public ActionResult Index(CustomerModel model)
+        public ActionResult Edit(CustomerModel model)
         {
             if (!ModelState.IsValid)
-            {
                 return View(model);
-            }
+
             //todo: save in the db
 
             Random rand = new Random();
@@ -40,6 +56,19 @@ namespace Fsd.Cs.Web.Controllers
         public ActionResult SaveSuccess(int reservationNumber, int number2)
         {
             return View(reservationNumber);
+        }
+
+        private CustomerModel MapCustomerToModel(Customer entity)
+        {
+            return new CustomerModel
+            {
+                Id = entity.Id,
+                FirstName = entity.FirstName,
+                LastName = entity.LastName,
+                Age = entity.Age,
+                Email = entity.Email,
+                Password = entity.Password,
+            };
         }
     }
 }

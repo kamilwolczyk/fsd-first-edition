@@ -1,0 +1,27 @@
+﻿@model CustomerListModel
+    
+<h2>Customers</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+            <th>Email address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (CustomerModel customer in Model.Customers)
+        {
+            <tr>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.Age</td>
+                <td>@customer.Email</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { customerId = customer.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
