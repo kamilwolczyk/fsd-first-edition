@@ -6,5 +6,7 @@ namespace Fsd.Cs.Services
     public interface ICustomerService
     {
         IEnumerable<Customer> GetAllCustomers();
+
+        Customer GetById(int id);
     }
 }

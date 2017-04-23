@@ -1,33 +1,34 @@
 ﻿using Fsd.Cs.Data.Entities;
 using System.Collections.Generic;
+using Fsd.Cs.Data.Sql;
 
 namespace Fsd.Cs.Services
 {
     public class CustomerService : ICustomerService
     {
+        private Repository<Customer> _repository;
+
+        public CustomerService()
+        {
+            _repository = new Repository<Customer>("Customers", "Id", reader => new Customer
+            {
+                Id = (int)reader["Id"],
+                FirstName = (string)reader["FirstName"],
+                LastName = (string)reader["LastName"],
+                Age = (int)reader["Age"],
+                Email = (string)reader["Email"],
+                Password = (string)reader["Password"]
+            });
+        }
+
         public IEnumerable<Customer> GetAllCustomers()
         {
-            return new List<Customer>
-            {
-                new Customer
-                {
-                    Id = 1,
-                    FirstName = "Kamil",
-                    LastName = "Wołczyk",
-                    Email = "k.wolczyk@headchannel.co.uk",
-                    Age = 28,
-                    Password = "nicTuNIeMa;p"
-                },
-                new Customer
-                {
-                    Id = 2,
-                    FirstName = "Jan",
-                    LastName = "Kowalski",
-                    Email = "jkowalski@gmail.com",
-                    Age = 60,
-                    Password = "qwerty"
-                }
-            };
+            return _repository.GetAllData();
+        }
+
+        public Customer GetById(int id)
+        {
+            return _repository.GetById(id);
         }
     }
 }

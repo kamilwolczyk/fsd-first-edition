@@ -30,11 +30,7 @@ namespace Fsd.Cs.Web.Controllers
         [HttpGet]
         public ActionResult Edit(int customerId)
         {
-            CustomerModel customerModel = _customerService.GetAllCustomers()
-                .Where(customer => customer.Id == customerId)
-                .Select(MapCustomerToModel)
-                .First();
-
+            CustomerModel customerModel = MapCustomerToModel(_customerService.GetById(customerId));
             return View(customerModel);
         }
 
@@ -49,11 +45,11 @@ namespace Fsd.Cs.Web.Controllers
             Random rand = new Random();
             int random = rand.Next(0, 100);
 
-            return RedirectToAction("SaveSuccess", new { reservationNumber = random, number2 = 5 });
+            return RedirectToAction("SaveSuccess", new { reservationNumber = random });
         }
 
         [HttpGet]
-        public ActionResult SaveSuccess(int reservationNumber, int number2)
+        public ActionResult SaveSuccess(int reservationNumber)
         {
             return View(reservationNumber);
         }

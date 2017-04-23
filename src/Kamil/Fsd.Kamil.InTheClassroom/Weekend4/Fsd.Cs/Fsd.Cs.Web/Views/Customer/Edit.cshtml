@@ -3,7 +3,7 @@
 
 <h2>Customer</h2>
 
-@using (Html.BeginForm("Index", "Customer", FormMethod.Post, new { novalidate = true }))
+@using (Html.BeginForm("Edit", "Customer", FormMethod.Post, new { novalidate = true }))
 {
     <p>@Html.ValidationSummary()</p>
 
@@ -36,7 +36,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    @Html.Submit("Wyślij");
+                    @Html.Submit("Wyślij")
                 </td>
             </tr>
         </tbody>

@@ -1,0 +1,21 @@
+﻿@model FootballTeamListModel
+    
+<h2>Teams</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (FootballTeamModel team in Model.Teams)
+        {
+            <tr>
+                <td>@team.Name</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { teamId = team.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
