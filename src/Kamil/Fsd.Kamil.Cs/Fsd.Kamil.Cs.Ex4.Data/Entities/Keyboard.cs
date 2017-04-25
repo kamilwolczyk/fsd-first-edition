@@ -5,8 +5,8 @@ namespace Fsd.Kamil.Cs.Ex4.Data.Entities
 {
     public class Keyboard : ProductBase
     {
-        public Keyboard(string producer, string model, decimal price, DateTime productionDate)
-            : base(producer, model, price, productionDate, ProductType.Keyboard)
+        public Keyboard(int id, string producer, string model, decimal price, DateTime productionDate)
+            : base(id, producer, model, price, productionDate, ProductType.Keyboard)
         { }
     }
 }

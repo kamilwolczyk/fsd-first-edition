@@ -1,4 +1,5 @@
-﻿@model DataPart<ProductModel>
+﻿@using Fsd.Kamil.Cs.Ex4.Data.Enums
+@model DataPart<ProductModel>
 @{ 
     int pages = Model.TotalCount / Model.Take;
 
@@ -9,6 +10,18 @@
 }
 <h2>Available products</h2>
 
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Add new product <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        @foreach (ProductType type in Enum.GetValues(typeof(ProductType)))
+        {
+            <li>@Html.ActionLink(type.ToString(), "Create", new { type = type })</li>
+        }
+    </ul>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -17,6 +30,7 @@
             <th>Price</th>
             <th>Production date</th>
             <th>Type</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -28,6 +42,9 @@
                 <td>@product.Price zł</td>
                 <td>@product.ProductionDate.ToShortDateString()</td>
                 <td>@product.Type</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = product.Id })
+                </td>
             </tr>
         }
     </tbody>

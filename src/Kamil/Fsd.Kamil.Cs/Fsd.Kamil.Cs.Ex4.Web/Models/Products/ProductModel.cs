@@ -7,6 +7,8 @@ namespace Fsd.Kamil.Cs.Ex4.Web.Models.Products
 {
     public class ProductModel
     {
+        public int Id { get; set; }
+
         [DataType(DataType.Text)]
         [DisplayName("Producer")]
         [Required(ErrorMessage = "Producer cannot be empty")]

@@ -5,8 +5,8 @@ namespace Fsd.Kamil.Cs.Ex4.Data.Entities
 {
     public class Notebook : ProductBase
     {
-        public Notebook(string producer, string model, decimal price, DateTime productionDate)
-            : base(producer, model, price, productionDate, ProductType.Notebook)
+        public Notebook(int id, string producer, string model, decimal price, DateTime productionDate)
+            : base(id, producer, model, price, productionDate, ProductType.Notebook)
         { }
     }
 }

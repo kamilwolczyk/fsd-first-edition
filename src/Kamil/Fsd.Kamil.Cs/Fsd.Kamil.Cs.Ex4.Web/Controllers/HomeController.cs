@@ -22,5 +22,10 @@ namespace Fsd.Kamil.Cs.Ex4.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult Success(string message)
+        {
+            return View(message);
+        }
     }
 }

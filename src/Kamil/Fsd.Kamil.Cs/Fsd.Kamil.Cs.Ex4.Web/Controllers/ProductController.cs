@@ -1,4 +1,5 @@
 ﻿using Fsd.Kamil.Cs.Ex4.Data.Entities;
+using Fsd.Kamil.Cs.Ex4.Data.Enums;
 using Fsd.Kamil.Cs.Ex4.Services.Products;
 using Fsd.Kamil.Cs.Ex4.Web.Models.Pageable;
 using Fsd.Kamil.Cs.Ex4.Web.Models.Products;
@@ -27,41 +28,68 @@ namespace Fsd.Kamil.Cs.Ex4.Web.Controllers
                 .GetAllProducts()
                 .OrderByDescending(product => product.ProductionDate);
 
-            DataPart<ProductModel> model = DataPart<ProductModel>.GetPartFromEntities(entities, skip, take,
-                entity => new ProductModel
-                {
-                    Producer = entity.Producer,
-                    Model = entity.Model,
-                    Type = entity.Type,
-                    Price = entity.Price,
-                    ProductionDate = entity.ProductionDate,
-                });
+            DataPart<ProductModel> model = DataPart<ProductModel>.GetPartFromEntities(entities, skip, take, MapEntityToModel);
 
             return View(model);
         }
 
         [HttpGet]
-        public ActionResult Create()
+        public ActionResult Create(ProductType type)
         {
-            return View(new ProductModel());
+            return View(GetNewModelByType(type));
         }
 
         [HttpPost]
         public ActionResult Create(ProductModel product)
         {
-            return View(product);
+            if (!ModelState.IsValid)
+                return View(product);
+
+            return RedirectToAction("Success", "Home", new { message = "Product has been created" });
         }
 
         [HttpGet]
-        public ActionResult Edit()
+        public ActionResult Edit(int id)
         {
-            return View(new ProductModel());
+            ProductBase product = _productService.GetById(id);
+            return View(MapEntityToModel(product));
         }
 
         [HttpPost]
         public ActionResult Edit(ProductModel product)
         {
-            return View(product);
+            if (!ModelState.IsValid)
+                return View(product);
+
+            return RedirectToAction("Success", "Home", new { message = "Product has been updated" });
+        }
+
+        private ProductModel MapEntityToModel(ProductBase entity)
+        {
+            return new ProductModel
+            {
+                Producer = entity.Producer,
+                Model = entity.Model,
+                Type = entity.Type,
+                Price = entity.Price,
+                ProductionDate = entity.ProductionDate,
+            };
+        }
+
+        private ProductModel GetNewModelByType(ProductType type)
+        {
+            switch (type)
+            {
+                case ProductType.Keyboard: return new KeyboardModel();
+                case ProductType.Monitor: return new MonitorModel();
+                case ProductType.Mouse: return new MouseModel();
+                case ProductType.Notebook: return new NotebookModel();
+                case ProductType.PC: return new PcModel();
+                case ProductType.Phone: return new PhoneModel();
+                case ProductType.Tablet: return new TabletModel();
+            }
+
+            return null;
         }
     }
 }

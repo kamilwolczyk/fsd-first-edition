@@ -154,7 +154,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Pageable\DataPart.cs" />
+    <Compile Include="Models\Products\KeyboardModel.cs" />
+    <Compile Include="Models\Products\MonitorModel.cs" />
+    <Compile Include="Models\Products\MouseModel.cs" />
+    <Compile Include="Models\Products\NotebookModel.cs" />
+    <Compile Include="Models\Products\PcModel.cs" />
+    <Compile Include="Models\Products\PhoneModel.cs" />
     <Compile Include="Models\Products\ProductModel.cs" />
+    <Compile Include="Models\Products\TabletModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +201,17 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\List.cshtml" />
+    <Content Include="Views\Product\Forms\_BaseFields.cshtml" />
+    <Content Include="Views\Product\Forms\Types\_Keyboard.cshtml" />
+    <Content Include="Views\Product\Forms\Types\_Monitor.cshtml" />
+    <Content Include="Views\Product\Forms\Types\_Tablet.cshtml" />
+    <Content Include="Views\Product\Forms\Types\_Phone.cshtml" />
+    <Content Include="Views\Product\Forms\Types\_Mouse.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Forms\_Index.cshtml" />
+    <Content Include="Views\Product\Forms\Types\_Notebook.cshtml" />
+    <Content Include="Views\Home\Success.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
