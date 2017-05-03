@@ -1,0 +1,9 @@
+E:\Visual Studio Projekty\Cs.Ex1\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\bin\Debug\Fsd.Dawid.Cs.Ex1.exe.config
+E:\Visual Studio Projekty\Cs.Ex1\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\bin\Debug\Fsd.Dawid.Cs.Ex1.exe
+E:\Visual Studio Projekty\Cs.Ex1\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\bin\Debug\Fsd.Dawid.Cs.Ex1.pdb
+E:\Visual Studio Projekty\Cs.Ex1\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\obj\Debug\Fsd.Dawid.Cs.Ex1.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projekty\Cs.Ex1\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\obj\Debug\Fsd.Dawid.Cs.Ex1.exe
+E:\Visual Studio Projekty\Cs.Ex1\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\obj\Debug\Fsd.Dawid.Cs.Ex1.pdb
+E:\Visual Studio Projekty\Fsd.Dawid.CS\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\bin\Debug\Fsd.Dawid.Cs.Ex1.exe.config
+E:\Visual Studio Projekty\Fsd.Dawid.CS\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\obj\Debug\Fsd.Dawid.Cs.Ex1.exe
+E:\Visual Studio Projekty\Fsd.Dawid.CS\Fsd.Dawid.Cs.Ex1\Fsd.Dawid.Cs.Ex1\obj\Debug\Fsd.Dawid.Cs.Ex1.pdb

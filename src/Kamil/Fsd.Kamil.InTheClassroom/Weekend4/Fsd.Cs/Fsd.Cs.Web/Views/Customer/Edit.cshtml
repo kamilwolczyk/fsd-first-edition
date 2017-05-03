@@ -1,0 +1,46 @@
+﻿@model CustomerModel
+
+
+<h2>Customer</h2>
+
+@using (Html.BeginForm("Edit", "Customer", FormMethod.Post, new { novalidate = true }))
+{
+    <p>@Html.ValidationSummary()</p>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>@Html.LabelFor(model => model.FirstName)</td>
+                <td>@Html.EditorFor(model => model.FirstName)</td>
+                <td>@Html.ValidationMessageFor(model=>model.FirstName)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.LastName)</td>
+                <td>@Html.EditorFor(model => model.LastName)</td>
+                <td>@Html.ValidationMessageFor(model => model.LastName)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Age)</td>
+                <td>@Html.EditorFor(model => model.Age)</td>
+                <td>@Html.ValidationMessageFor(model => model.Age)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Email)</td>
+                <td>@Html.EditorFor(model => model.Email)</td>
+                <td>@Html.ValidationMessageFor(model => model.Email)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Password)</td>
+                <td>@Html.EditorFor(model => model.Password)</td>
+                <td>@Html.ValidationMessageFor(model => model.Password)</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    @Html.Submit("Wyślij")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+@Html.Partial("AdsPanel", Model.Age)

@@ -1,0 +1,5 @@
+C:\HeadChannel\fsd-first-edition\src\Slawek\Fsd.Slawek.Cs.Ex1\Fsd.Slawek.Cs.Ex1\bin\Debug\Fsd.Slawek.Cs.Ex1.exe.config
+C:\HeadChannel\fsd-first-edition\src\Slawek\Fsd.Slawek.Cs.Ex1\Fsd.Slawek.Cs.Ex1\bin\Debug\Fsd.Slawek.Cs.Ex1.exe
+C:\HeadChannel\fsd-first-edition\src\Slawek\Fsd.Slawek.Cs.Ex1\Fsd.Slawek.Cs.Ex1\bin\Debug\Fsd.Slawek.Cs.Ex1.pdb
+C:\HeadChannel\fsd-first-edition\src\Slawek\Fsd.Slawek.Cs.Ex1\Fsd.Slawek.Cs.Ex1\obj\Debug\Fsd.Slawek.Cs.Ex1.exe
+C:\HeadChannel\fsd-first-edition\src\Slawek\Fsd.Slawek.Cs.Ex1\Fsd.Slawek.Cs.Ex1\obj\Debug\Fsd.Slawek.Cs.Ex1.pdb

@@ -1,0 +1,24 @@
+﻿@model FootballTeamModel
+
+
+<h2>Football team</h2>
+
+@using (Html.BeginForm("Edit", "Team", FormMethod.Post, new { novalidate = true }))
+{
+    <p>@Html.ValidationSummary()</p>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>@Html.LabelFor(model => model.Name)</td>
+                <td>@Html.EditorFor(model => model.Name)</td>
+                <td>@Html.ValidationMessageFor(model=>model.Name)</td>
+            </tr>            
+            <tr>
+                <td colspan="3">
+                    @Html.Submit("Wyślij")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
