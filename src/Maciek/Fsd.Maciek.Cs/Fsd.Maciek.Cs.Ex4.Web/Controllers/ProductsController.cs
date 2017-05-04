@@ -8,18 +8,18 @@ namespace Fsd.Maciek.Cs.Ex4.Web.Controllers
 {
     public class ProductsController : Controller
     {
-        public IProductService ProductService { get; set; }
+        public IProductService _productService;
 
-        public ProductsController()
+        public ProductsController(IProductService productService)
         {
-            ProductService = new MockProductService();
+            _productService = productService;
         }
 
         public ActionResult Index(int page = 1, int items = 20)
         {
             ProductListWebModel productModel = new ProductListWebModel()
             {
-                Products = ProductService.GetListOfProducts().ToList()
+                Products = _productService.GetListOfProducts().ToList()
                     .Skip((page - 1) * items).Take(items)
                     .Select(item => new ProductWebModel
                     {

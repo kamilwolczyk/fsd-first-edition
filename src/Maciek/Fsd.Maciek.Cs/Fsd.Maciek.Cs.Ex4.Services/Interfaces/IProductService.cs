@@ -5,6 +5,8 @@ namespace Fsd.Maciek.Cs.Ex4.Services.Interfaces
 {
     public interface IProductService
     {
+        int GetProductsCount();
+
         IEnumerable<Product> GetListOfProducts();
     }
 }
