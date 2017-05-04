@@ -46,5 +46,8 @@ c) Połączenie z bazą danych poprzez ADO.NET
  - dodać connection string
  - połączyć się do bazy poprzez data reader
  - pobrać przykładowe dane z bazy i zapisać do obiektu
+
+d) Użycie połączenia bazy SQL we własnej aplikacji
+ - utworzyć tabele w bazie pozwalające przechować produkty
+ - wypełnić tabelę danymi
  - napisać własną mini bibliotekę do pobierania elementów i mapowania na klasy
-d) Entity framework

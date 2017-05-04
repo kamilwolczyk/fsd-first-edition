@@ -1,11 +1,48 @@
 ﻿1. sobota 06.05.2017
-a) 
-b)
-c)
-d)
+a) Entity framework
+ - wyjaśnić po co entity framework - co to jest i jakie ma zastosowanie
+ - zainstalować entity framework poprzez nuget package manager
+ - dodać kontekst bazy danych
+ - pobranie danych poprzez entity framework
+ - zakrualizowanie danych
+
+b) Web API
+ - wyjaśnić po co jest api w aplikacji
+ - dodać kontroler api w aplikacji
+ - utworzyć zestaw metod API dla danej encji
+c) HTML
+ - opowiedzieć o odpowiedzi tekstowej z serwera
+ - wyjaśnić jak działa html, css, javascript
+ - jak działa przeglądarka - tworzenie drzewa DOM
+ - struktura dokumentu html: head i body
+ - html5 - nowe elementy w strukturze: header, footer, nav, section, aside
+ - klasy i identyfikatory
+d) css
+ - zasady kaskadowych arkuszy styli
+ - nadawanie elementom stylu: kolor, wielkość, obramowanie
+ - model pudełka: margin, border, padding, width
+ - pozycjonowanie: static, relative, absolute, fixed
+ - ćwiczenie na pozycjonowanie elementów
 
 2. Niedziela 07.05.2017
-a) 
-b)
-c)
-d)
+a) biblioteka bootstrap
+ - ogólna charakterystyka, wyjaśnienie RWD
+ - pobranie biliboteki do aplikacji
+ - grid system
+ - komponenty: brzyciski, panele, tła, chcionki, nagłówki
+b) preprocesory css: less i sass
+ - omówienie potrzeby stosowania preprocesorów
+ - przykład zastosowania 
+c) podstawy języka javascript
+ - idea i potrzeba języka programowania po stronie klienta
+ - mechanizm dodawania skryptów
+ - cechy języka: skryptowy, niekompilowany, 1 wątkowy, bez typowania zmiennych, więcej dobrowolności ale przez to potrzeba większej kontroli przez developera
+ - wyjaśnienie event loop
+ - dodanie pierwszego skryptu do dokumentu który wyświetli komunikat
+ - najprostsza komunikacja: console.log(), console.error(), alert(), confirm(), prompt()
+ - zmienne, operatory, warunki (if-else, switch), pętle (for, for in)
+d) poznanie narzędzia Chrome developer tools
+ - konsola
+ - sieć
+ - skrypty
+ - css
