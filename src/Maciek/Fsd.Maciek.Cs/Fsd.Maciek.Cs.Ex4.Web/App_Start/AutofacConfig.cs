@@ -16,7 +16,7 @@ namespace Fsd.Maciek.Cs.Ex4.Web
             // the class in Global.asax.)
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
-            builder.RegisterType<MockProductService>().As<IProductService>().InstancePerLifetimeScope();
+            builder.RegisterType<ProductService>().As<IProductService>().InstancePerLifetimeScope();
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();

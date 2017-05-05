@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="MockProductService.cs" />
     <Compile Include="Interfaces\IProductService.cs" />
+    <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
