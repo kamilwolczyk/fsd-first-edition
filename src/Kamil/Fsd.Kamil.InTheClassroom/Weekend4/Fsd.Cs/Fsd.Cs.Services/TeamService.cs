@@ -1,30 +1,39 @@
-﻿using Fsd.Cs.Data.Entities;
-using Fsd.Cs.Data.Sql;
+﻿using Fsd.Cs.Data;
+using Fsd.Cs.Data.Entities;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Fsd.Cs.Services
 {
     public class TeamService : ITeamService
     {
-        private Repository<FootballTeam> _teamRepository;
+        public FootballDb FootballDb { get; set; }
 
         public TeamService()
         {
-            _teamRepository = new Repository<FootballTeam>("FootballTeams", "Id", reader => new FootballTeam
-            {
-                Id = (int)reader["Id"],
-                Name = (string)reader["Name"]
-            });
+            FootballDb = new FootballDb();
         }
 
         public IEnumerable<FootballTeam> GetAllTeams()
         {
-            return _teamRepository.GetAllData();
+            return FootballDb.FootballTeams;
         }
 
         public FootballTeam GetById(int id)
         {
-            return _teamRepository.GetById(id);
+            return FootballDb.FootballTeams.FirstOrDefault(item => item.Id == id);
+        }
+
+        public void AddNewTeam(string name, int foundationYear)
+        {
+            FootballTeam newTeam = new FootballTeam
+            {
+                Name = name,
+                FoundationYear = foundationYear
+            };
+
+            FootballDb.FootballTeams.Add(newTeam);
+            FootballDb.SaveChanges();
         }
     }
 }

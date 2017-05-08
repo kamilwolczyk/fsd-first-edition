@@ -1,6 +1,7 @@
 ﻿using Fsd.Cs.Data.Entities;
 using Fsd.Cs.Services;
 using Fsd.Cs.Web.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -20,7 +21,7 @@ namespace Fsd.Cs.Web.Controllers
         {
             FootballTeamListModel model = new FootballTeamListModel
             {
-                Teams = _teamService.GetAllTeams().Select(MapTeamToModel)
+                Teams = _teamService.GetAllTeams().ToList().Select(MapTeamToModel)
             };
 
             return View(model);
@@ -30,8 +31,7 @@ namespace Fsd.Cs.Web.Controllers
         public ActionResult Edit(int teamId)
         {
             FootballTeam team = _teamService.GetById(teamId);
-
-            return View(MapTeamToModel(team));
+            return View(MapTeamToModelWithPlayers(team));
         }
 
         [HttpPost]
@@ -51,12 +51,30 @@ namespace Fsd.Cs.Web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public string AddNewTeam(string name, int year)
+        {
+            _teamService.AddNewTeam(name, year);
+            return "OK";
+        }
+
         private FootballTeamModel MapTeamToModel(FootballTeam entity)
         {
             return new FootballTeamModel
             {
                 Id = entity.Id,
-                Name = entity.Name
+                Name = entity.Name,
+                PlayerNames = new List<string>()
+            };
+        }
+
+        private FootballTeamModel MapTeamToModelWithPlayers(FootballTeam entity)
+        {
+            return new FootballTeamModel
+            {
+                Id = entity.Id,
+                Name = entity.Name,
+                PlayerNames = entity.Players.Select(player => $"{player.FirstName} {player.LastName}")
             };
         }
     }

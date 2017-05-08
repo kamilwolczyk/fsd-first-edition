@@ -8,5 +8,7 @@ namespace Fsd.Cs.Services
         IEnumerable<FootballTeam> GetAllTeams();
 
         FootballTeam GetById(int id);
+
+        void AddNewTeam(string name, int foundationYear);
     }
 }

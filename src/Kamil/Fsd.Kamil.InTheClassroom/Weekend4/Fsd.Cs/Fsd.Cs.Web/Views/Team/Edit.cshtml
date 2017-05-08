@@ -21,4 +21,12 @@
             </tr>
         </tbody>
     </table>
+
+    <p>Zawodnicy:</p>
+    <ul>
+        @foreach (string name in Model.PlayerNames)
+        {
+            <li>@name</li>
+        }
+    </ul>
 }

@@ -9,3 +9,21 @@ a)
 b)
 c)
 d)
+
+
+do zrobienia
+
+
+c) podstawy języka javascript
+ - idea i potrzeba języka programowania po stronie klienta
+ - mechanizm dodawania skryptów
+ - cechy języka: skryptowy, niekompilowany, 1 wątkowy, bez typowania zmiennych, więcej dobrowolności ale przez to potrzeba większej kontroli przez developera
+ - wyjaśnienie event loop
+ - dodanie pierwszego skryptu do dokumentu który wyświetli komunikat
+ - najprostsza komunikacja: console.log(), console.error(), alert(), confirm(), prompt()
+ - zmienne, operatory, warunki (if-else, switch), pętle (for, for in)
+d) poznanie narzędzia Chrome developer tools
+ - konsola
+ - sieć
+ - skrypty
+ - css

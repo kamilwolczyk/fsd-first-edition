@@ -1,0 +1,19 @@
+@import 'variables.scss';
+
+@mixin panelBorder($size){
+  border-color: $borderColor;
+  border-style: $borderType;
+  border-size: $size;
+}
+
+body {
+  background: $bodyBackground;
+}
+
+header {
+  @include panelBorder(2px);
+}
+
+footer {
+  @include panelBorder(1px);
+}

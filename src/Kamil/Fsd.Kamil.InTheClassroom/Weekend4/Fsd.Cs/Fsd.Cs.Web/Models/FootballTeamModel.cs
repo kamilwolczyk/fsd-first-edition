@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Fsd.Cs.Web.Models
 {
@@ -8,5 +9,8 @@ namespace Fsd.Cs.Web.Models
 
         [DisplayName("Nazwa")]
         public string Name { get; set; }
+
+        [DisplayName("Zawodnicy")]
+        public IEnumerable<string> PlayerNames { get; set; }
     }
 }

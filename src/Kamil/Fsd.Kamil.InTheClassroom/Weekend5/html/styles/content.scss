@@ -1,0 +1,5 @@
+@import 'global.scss';
+
+.panel {
+  @include panelBorder(10px);
+}
