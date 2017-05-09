@@ -9,11 +9,15 @@ namespace Fsd.Slawek.Cs.Ex4.Data.Entities
 
         public decimal Size { get; set; }
 
-        //public Monitor(int id, string producer, string model, DateTime productionDate, decimal price, int responseTime, decimal size) : 
-        //    base(id, producer, model, ProductType.Monitor, productionDate, price)
-        //{
-        //    ResponseTime = responseTime;
-        //    Size = size;
-        //}
+        public Monitor()
+        {
+        }
+
+        public Monitor(int id, string producer, string model, DateTime productionDate, decimal price, int responseTime, decimal size) :
+            base(id, producer, model, ProductType.Monitor, productionDate, price)
+        {
+            ResponseTime = responseTime;
+            Size = size;
+        }
     }
 }

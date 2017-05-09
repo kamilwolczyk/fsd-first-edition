@@ -7,10 +7,14 @@ namespace Fsd.Slawek.Cs.Ex4.Data.Entities
     {
         public string Interfaces { get; set; }
 
-        //public SoundCard(int id, string producer, string model, DateTime productionDate, decimal price, string interfaces) : 
-        //    base(id, producer, model, ProductType.SoundCard, productionDate, price)
-        //{
-        //    Interfaces = interfaces;
-        //}
+        public SoundCard()
+        {
+        }
+
+        public SoundCard(int id, string producer, string model, DateTime productionDate, decimal price, string interfaces) :
+            base(id, producer, model, ProductType.SoundCard, productionDate, price)
+        {
+            Interfaces = interfaces;
+        }
     }
 }

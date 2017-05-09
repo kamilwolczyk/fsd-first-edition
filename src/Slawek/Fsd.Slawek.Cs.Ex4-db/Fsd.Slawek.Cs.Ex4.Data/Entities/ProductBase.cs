@@ -16,6 +16,7 @@ namespace Fsd.Slawek.Cs.Ex4.Data.Entities
         public DateTime ProductionDate { get; set; }
 
         public decimal Price { get; set; }
+
         protected ProductBase()
         {
 

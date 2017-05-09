@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\GraphicCard.cs" />
-    <Compile Include="Entities\IProduct.cs" />
     <Compile Include="Entities\Monitor.cs" />
     <Compile Include="Entities\Motherboard.cs" />
     <Compile Include="Entities\Processor.cs" />
