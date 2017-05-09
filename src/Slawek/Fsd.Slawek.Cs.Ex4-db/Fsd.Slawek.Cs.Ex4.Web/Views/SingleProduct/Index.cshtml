@@ -1,0 +1,29 @@
+﻿@model SingleProduct<ProductBase>
+@{
+    //ViewBag.Title = Model.Properties["Type"];
+}
+
+<h2>Product info:</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Values</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model.Properties)
+    {
+        <tr>
+            <td>@item.Key</td>
+            <td>@item.Value</td>
+        </tr>
+    }
+    <tr>
+        <td colspan="2">
+            <a class="btn btn-success btn-group-sm" href="@Url.Action("Index", "Product" )">Back to list</a>
+        </td>
+    </tr>
+</table>
+
+
+

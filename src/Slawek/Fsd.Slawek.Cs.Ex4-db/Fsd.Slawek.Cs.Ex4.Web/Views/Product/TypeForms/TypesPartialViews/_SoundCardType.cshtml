@@ -1,0 +1,19 @@
+﻿@model SoundCardModel
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("/Views/Product/TypeForms/_SimpleProduct.cshtml", Model)
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.Interfaces) </td>
+                <td>
+                    @Html.EditorFor(model => model.Interfaces, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.Interfaces)
+                </td>
+            </tr>
+        </table>
+    </div>
+    <input type="submit" value="Wyślij" />
+}

@@ -1,0 +1,50 @@
+﻿@model ProductModel
+<div class="form-group">
+    <br />
+    <table>
+        <tr>
+            <td class="img-rounded" style="width: 150px; background-color: cornflowerblue"> @Html.LabelFor(model => model.Producer)</td>
+            <td>
+                @Html.EditorFor(model => model.Producer, new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.Producer)
+            </td>
+</tr>
+    </table>
+</div>
+<div class="form-group">
+    <table>
+        <tr>
+            <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.Model)</td>
+            <td>
+                @Html.EditorFor(model => model.Model, new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.Model)
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="form-group">
+    <table>
+        <tr>
+            <td  class="img-rounded" style="width: 150px; background-color: cornflowerblue"> @Html.LabelFor(model => model.Price) </td>
+            <td>
+                @Html.EditorFor(model => model.Price, new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.Price)
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="form-group">
+    <table>
+        <tr>
+            <td  class="img-rounded" style="width: 150px; background-color: cornflowerblue"> @Html.LabelFor(model => model.ProductionDate) </td>
+            <td>
+                @Html.EditorFor(model => model.ProductionDate, new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.ProductionDate)
+            </td>
+        </tr>
+    </table>
+</div>
+
+@Html.HiddenFor(model => model.Id)
+@Html.HiddenFor(model => model.Type)
+
