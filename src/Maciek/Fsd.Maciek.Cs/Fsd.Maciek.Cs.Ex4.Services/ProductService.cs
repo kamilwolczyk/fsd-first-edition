@@ -23,7 +23,7 @@ namespace Fsd.Maciek.Cs.Ex4.Services
                      Model = (string)reader["Model"],
                      Price = (decimal)reader["Price"],
                      ProductionYear = (int)reader["ProductionYear"],
-                    // ProductType = (ProductType)reader["ProductType"]
+                     ProductType = (ProductType)Enum.Parse(typeof(ProductType), (string)reader["ProductType"])
                  });
         }
 
