@@ -1,0 +1,106 @@
+@import "_variables.scss";
+
+* {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+  }
+  
+  #wrapper {
+      max-width: 1250px;
+      margin: auto;
+    @include Shadow($hLength,$vLength, $blurRadius, $spreadRadius, $shadowColor );
+  }
+  
+  header {
+      position: relative;
+      background: url(../photos/lake.jpg) center no-repeat;
+      background-size: 100%, 100%;
+      width: 100%;
+      height: 20vh;
+  }
+  
+  div#logo {
+      position: absolute;
+      left: 20%;
+      top: 30%;
+      font-family: sans-serif;
+      font-size: $logoFontSize;
+      color: $logoFontColor;
+ }
+  
+#logo .red{
+    color: red;
+}
+
+  nav {
+      overflow: hidden;
+  }
+  
+  nav a {
+      text-align: center;
+      width: 33.333%;
+      float: left;
+      background-color: $menuBackgroundColor;
+      padding: 10px 20px;
+      transition: $menuTimeTransition;
+  }
+  
+  nav a:hover {
+      background-color: $menuBackgroundColorOnHover;
+      transition: $menuTimeTransition;
+  }
+
+  
+  nav a:link,
+  nav a:visited {
+      color: black;
+      text-decoration: none;
+  }
+  
+  section p {
+      padding: 5px;
+  }
+  
+  footer {
+      width: 100%;
+      background-color: $footerColor;
+      text-align: center;
+  }
+  
+  #links {
+      overflow: hidden;
+      margin: 0 15%;
+  }
+  
+  #links ul {
+      width: 100%;
+      list-style-type: none;
+  }
+
+  
+  #links ul li {
+      float: left;
+      width: 50%;
+      padding: 5px;
+      border-left: $footerLinkBorderWidth solid $footerColor;
+  }
+  
+  #links ul li:hover {
+      border-left: $footerLinkBorderWidth solid $footerAccentColor;
+  }
+  
+  #links ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+  }
+  
+  #sign {
+      background-color: $signBackgroundColor;
+      color: $signFontColor;
+      margin-bottom: 0px;
+  }
+
+@import "_mobile.scss";
+  

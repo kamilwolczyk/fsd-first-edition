@@ -1,0 +1,28 @@
+$shadowColor: #888888;
+$hLength: 0px;
+$vLength: 0px;
+$blurRadius: 12px;
+$spreadRadius:3px;
+
+$menuBackgroundColor: darkorange;
+$menuBackgroundColorOnHover : red;
+$menuTimeTransition: 1s;
+
+
+$logoFontSize: 6vw;
+$logoFontColor: whitesmoke;
+
+$footerColor: gray;
+$footerLinkBorderWidth : 20px;
+$footerAccentColor: darkorange;
+
+$signBackgroundColor: black;
+$signFontColor:white;
+
+
+@mixin Shadow($hLength,$vLength, $blurRadius, $spreadRadius, $shadowColor ) {
+-webkit-box-shadow: $hLength $vLength  $blurRadius $spreadRadius  $shadowColor;
+-moz-box-shadow: $hLength $vLength  $blurRadius $spreadRadius  $shadowColor;
+box-shadow: $hLength $vLength  $blurRadius $spreadRadius  $shadowColor;
+    
+}
