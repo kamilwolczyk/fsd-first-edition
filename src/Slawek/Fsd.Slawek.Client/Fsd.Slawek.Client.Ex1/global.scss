@@ -1,0 +1,111 @@
+@import "varibles";
+
+@media (max-width: 600px) {
+    header {
+        display: none;
+    }
+ }   
+
+body{
+    background-color: $body-color;
+}
+
+footer{
+    background-color: $footer-color;
+    position: absolute;
+    bottom: -10px;
+    left:15px;
+    right: 15px;
+}
+
+footer p {
+    text-align: center;
+    background-color: $footer-signature-bcolor;
+    margin: 0;
+}
+
+.ul-footer {
+    list-style-type: none;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+.banner-text {
+    position: absolute;
+    margin:0;
+    top:10%;
+    left:20%;
+}
+
+.banner-first{
+    color: $signature-color1;
+    font-weight: bold;
+    font-family: "courier";
+}
+
+.banner-second{
+    color: $signature-color2;
+    font-weight: bold;
+    font-family: "courier";
+}
+
+.banner-third{
+    color: $signature-color3;
+    font-weight: bold;
+    font-family: "courier";
+}
+
+footer li {
+    text-align: center;
+}
+
+header {
+    height: 200px;
+    position: relative;
+    background: $banner-image;
+    background-size: 100%, 100%;
+    width: 100%;
+    height: 20vh;
+}
+
+#main{
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    right: 15%;
+    background-color: $main-div-color;
+    box-shadow: 0px 0px 42px -1px $shadow-color;
+}
+
+nav {
+    position: relative;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav li {
+    text-align: center;
+    width: 33.333%;
+    float: left;
+    background-color: $menu-color;
+    padding: 15px 0px;
+    transition: 1s; 
+   }
+
+li a{
+    color: blue;
+}
+
+.content {
+    height: 500px;
+}
+
+nav li:hover {
+    background-color: $menu-hover-color;
+    transition: 1s; 
+}
