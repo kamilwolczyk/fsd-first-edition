@@ -16,12 +16,16 @@ footer{
     bottom: -10px;
     left:15px;
     right: 15px;
-}
 
-footer p {
-    text-align: center;
-    background-color: $footer-signature-bcolor;
-    margin: 0;
+    p {
+        text-align: center;
+        background-color: $footer-signature-bcolor;
+        margin: 0;
+    }
+
+    li {
+        text-align: center;
+    }
 }
 
 .ul-footer {
@@ -56,10 +60,6 @@ footer p {
     font-family: "courier";
 }
 
-footer li {
-    text-align: center;
-}
-
 header {
     height: 200px;
     position: relative;
@@ -78,24 +78,32 @@ header {
     box-shadow: 0px 0px 42px -1px $shadow-color;
 }
 
-nav {
-    position: relative;
-}
-
 ul{
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
 
-nav li {
-    text-align: center;
-    width: 33.333%;
-    float: left;
-    background-color: $menu-color;
-    padding: 15px 0px;
-    transition: 1s; 
-   }
+nav {
+    position: relative;
+    
+    ul{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    li {
+        text-align: center;
+        background-color: $menu-color;
+        padding: 15px 0px;
+        transition: 1s; 
+    }
+
+    li:hover {
+        background-color: $menu-hover-color;
+        transition: 1s; 
+    }
+}
 
 li a{
     color: blue;
@@ -103,9 +111,4 @@ li a{
 
 .content {
     height: 500px;
-}
-
-nav li:hover {
-    background-color: $menu-hover-color;
-    transition: 1s; 
 }
