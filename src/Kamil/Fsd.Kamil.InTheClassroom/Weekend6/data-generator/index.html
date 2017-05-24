@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/spinner.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Generator</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <form class="navbar-form navbar-left">
+                  <button class="btn btn-primary" id="generateDataButton">Generuj dane</button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <section>
+      <div id="spinner" class="cssload-container">
+        <div class="cssload-whirlpool"></div>
+      </div>
+
+      <table id="contentTable" class="table">
+        <thead>
+          <tr>
+            <th>L.p.</th>
+            <th>Autor</th>
+            <th>Tytuł</th>
+            <th>Akcje</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+    </section>
+
+  </div>
+
+  <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/book.js"></script>
+  <script type="text/javascript" src="scripts/initializer.js"></script>
+  <script type="text/javascript" src="scripts/tableGenerator.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
+</body>
+
+</html>

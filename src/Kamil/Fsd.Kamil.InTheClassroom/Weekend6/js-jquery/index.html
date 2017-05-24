@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body onReady="start()">
+  <header>Nagłowek</header>
+  <section id="content">
+    <p class="red bold">Tekst numer 1</p>
+    <p class="red">Tekst numer 2</p>
+    <p class="green bold">Tekst numer 3</p>
+    <p class="blue">Tekst numer 4</p>
+  </section>
+
+  <section>
+    <form>
+      Imie: <input id="firstName" type="text" />
+      Nazwisko: <input id="lastName" type="text" />
+      Email: <input id="email" type="text" />
+      <input type="submit" value="Wyślij" />
+    </form>
+  </section>
+  
+  <section id="countries">
+    <input type="text" id="languageCode" placeholder="Language code">
+    <button id="languageCodeSearch">Search</button>
+    <ul id="countyList"></ul>
+  </section>
+
+  <section id="log">
+    <button id="actionButton">akcja</button>
+    <ul id='logList'></ul>
+  </section>
+  <div id="externalSite"></div>
+  <button id="loadContent">Załaduj treść</button>
+  <footer>
+    Kamil Wolczyk 2017
+  </footer>
+
+  <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./scripts/app.js"></script>
+</body>
+
+</html>
