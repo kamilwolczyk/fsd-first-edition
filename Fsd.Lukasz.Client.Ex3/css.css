@@ -1,0 +1,52 @@
+.row-eq-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#colorPallet {
+    height: 80%;
+}
+
+#infoPallet {
+    position: relative;
+    height: 20%;
+    clear: both;
+}
+
+#rowPicker>div:hover {
+    /*transform: rotate(-10deg);*/
+    z-index: 100;
+    outline: 1px black dashed;
+    opacity: 0.30;
+    /*filter: invert(100%);*/
+    /* border: 1px solid white !important ;*/
+}
+
+.colorSquare {
+    height: 2vw;
+    /* todo dynamic height*/
+}
+
+.well {
+    margin: 0px;
+}
+
+#palletColumn {
+    height: 100%;
+}
+
+#palletRow {
+    height: 100%;
+}
+
+#info {
+    margin: 0px;
+    position: absolute;
+    /* 2 */
+    top: 50%;
+    /* 3 */
+    transform: translate(0, -50%)
+}
+#info p{
+    margin: 0px;
+}
