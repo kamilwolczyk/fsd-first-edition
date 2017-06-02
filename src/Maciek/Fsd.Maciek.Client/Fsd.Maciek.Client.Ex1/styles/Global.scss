@@ -1,0 +1,55 @@
+@import 'settings';
+
+.container{
+        width: 70%;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+.row{
+        margin: 0px;
+    }
+
+.btn{
+    font-size: 14px;
+    font-weight: bold;
+    background: $button-Background;
+    padding: 10px;
+    transition: 1s;    
+    border-radius: 0 !important;
+}
+
+.btn:hover{
+    color: $button-Background;
+    background: white;
+    transition: 1s;
+    }
+
+.content{
+    h1{
+        color: $content-text-color;
+        height: $content-size;
+    }
+}
+
+.links{
+    padding: 0px;
+}
+
+div.header-image{
+    position: relative;
+}
+
+div.text-on-image{
+	position: absolute;
+	top: 20px; 
+    width: inherit;
+        h1{
+            color: $header-text-color;
+        }
+}
+
+.signature{
+        text-align: center;
+}
