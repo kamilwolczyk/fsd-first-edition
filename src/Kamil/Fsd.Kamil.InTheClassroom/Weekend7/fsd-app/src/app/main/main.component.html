@@ -1,0 +1,22 @@
+<app-header></app-header>
+<section>
+  <app-clock></app-clock>
+  <app-player-log></app-player-log>
+</section>
+
+<table>
+  <thead>
+  <tr>
+    <td>Imie</td>
+    <td>Akcja</td>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let name of names">
+      <td>{{name}}</td>
+      <td>
+        <button (click)="actionClick(index)">Click</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

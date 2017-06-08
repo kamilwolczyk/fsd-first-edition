@@ -1,0 +1,21 @@
+<table>
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Level</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players">
+      <td>{{player.firstName}}</td>
+      <td>{{player.lastName}}</td>
+      <td>{{getLevelName(player.playerLevel)}}</td>
+      <td>
+        <app-button [config]="introduceButtonConfig" (onButtonClick)="introduceClick($event, player)"></app-button>
+        <app-button [config]="playButtonConfig" (onButtonClick)="playClick($event, player)"></app-button>
+      </td>
+    </tr>
+  </tbody>
+</table>
