@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.name}}</td>
+      <td>{{product.price}} zł</td>
+      <td>
+        <button (click)="selectProduct(product)">Add</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

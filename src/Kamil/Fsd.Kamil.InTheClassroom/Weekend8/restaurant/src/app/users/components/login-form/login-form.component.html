@@ -1,0 +1,38 @@
+<div *ngIf="!isLogged">
+  <p class="error" *ngIf="error != null">{{error}}</p>
+
+  <form #myForm="ngForm" (ngSubmit)="login(myForm.value)" novalidate>
+    <table>
+      <tr>
+        <td>Login:</td>
+        <td><input type="text" #loginControl="ngModel" ngModel name="login" required></td>
+        <td>
+          <span class="red" *ngIf="loginControl.dirty && loginControl.hasError('required')">Login is required</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" #passwordControl="ngModel" ngModel name="password" required minlength="3"></td>
+        <td>
+          <span class="red" *ngIf="passwordControl.dirty && passwordControl.hasError('required')">Password is required</span>
+          <span class="red" *ngIf="passwordControl.dirty && passwordControl.hasError('minlength')">Password is to short</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" ngModel name="email"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" [disabled]="!myForm.valid">login</button></td>
+      </tr>
+    </table>
+  </form>
+
+</div>
+
+<div *ngIf="isLogged">
+  Hello, you are logged as {{user.login}} - {{user.email}}.
+  <button (click)="logout()">Logout</button>
+</div>

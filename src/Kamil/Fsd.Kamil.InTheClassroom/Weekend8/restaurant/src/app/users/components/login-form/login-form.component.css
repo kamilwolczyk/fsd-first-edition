@@ -1,0 +1,16 @@
+.error {
+    background: orangered;
+    color: white;
+    border: solid 1px white;
+    padding: 10px;
+    margin: 10px;
+}
+
+input.ng-dirty.ng-invalid {
+    background-color: orangered;
+    color: white;
+}
+
+.red {
+    color: red;
+}
