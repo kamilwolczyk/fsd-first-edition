@@ -1,0 +1,19 @@
+#logo{
+    background: url('/assets/pictures/RestaurantLogo.jpg') center center;
+    background-repeat: no-repeat;
+    height: 240px;
+    weight:100%;
+    overflow: hidden;
+}
+
+p{
+    margin: 0px;
+}
+
+div{
+    margin: 0px;
+}
+h2{
+    text-align: center;
+    font-size: 28px;
+}

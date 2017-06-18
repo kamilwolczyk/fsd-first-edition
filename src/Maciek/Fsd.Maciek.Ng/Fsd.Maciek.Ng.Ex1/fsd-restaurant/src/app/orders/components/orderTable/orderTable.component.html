@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <th>L.p</th>
+    <th>Produkt</th>
+    <th>Cena</th>
+    <th>Ilość</th>
+    <th>Akcje</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let orderItem of order.items; let i = index" [attr.data-index]="i">
+      <td>{{i+1}}</td>
+      <td>{{orderItem.product.name}}</td>
+      <td>{{orderItem.product.price|number:'.2'}} zł</td>
+      <td>{{orderItem.quantity}}</td>
+      <td>Akcja</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Całkowita cena</td>
+      <td>{{order.totalPrice|number:'.2'}} zł</td>
+    </tr>
+  </tbody>
+
+</table>

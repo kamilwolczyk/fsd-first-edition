@@ -1,0 +1,31 @@
+<section *ngIf="!checkPermissions()">
+  <form #myForm="ngForm" (ngSubmit)="logIn(myForm.value, myForm)" novalidate>
+    <table>
+      <tr>
+        <td>Login: </td>
+        <td><input type="text" #loginControl="ngModel" ngModel name="loginText" required/></td>
+        <td>
+          <span *ngIf="loginControl.dirty && loginControl.hasError('required')">Login is invalid</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Password: </td>
+        <td><input type="password" #passwordControl="ngModel" ngModel name="password" required minlength="3" /></td>
+        <td>
+          <span *ngIf="passwordControl.dirty && passwordControl.hasError('required')">Password is required</span>
+          <span *ngIf="passwordControl.dirty && passwordControl.hasError('minlength')">Password is too short</span>
+        </td>
+      </tr>
+      <tr>
+        <td><button type="submit" [disabled]="!myForm.valid">Login</button></td>
+      </tr>
+      <tr>
+        value={{myForm.value|json}} value={{myForm.valid}}
+      </tr>
+    </table>
+  </form>
+</section>
+<section *ngIf="checkPermissions()">
+  <h1>Jesteś zalogowany</h1>
+  <button (click)="logOut()"> Wyloguj się</button>
+</section>

@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+<table>
+  <thead>
+    <th>L.p</th>
+    <th>Nazwa</th>
+    <th>Opis</th>
+    <th>Cena</th>
+    <th>Akcje</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i = index" [attr.data-index]="i">
+      <td>{{i+1}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.price|number:'.2'}} zł</td>
+      <td>
+        <button (click)="selectProduct(product)">Add</button>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
