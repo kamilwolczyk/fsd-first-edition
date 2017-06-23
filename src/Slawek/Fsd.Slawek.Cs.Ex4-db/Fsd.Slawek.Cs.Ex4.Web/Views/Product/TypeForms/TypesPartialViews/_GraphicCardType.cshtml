@@ -1,0 +1,34 @@
+﻿@model GraphicCardModel
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("/Views/Product/TypeForms/_SimpleProduct.cshtml", Model)
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.MemorySize)</td>
+                <td>
+                    @Html.EditorFor(model => model.MemorySize, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.MemorySize)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.MemoryType)</td>
+                <td>
+                    @Html.EditorFor(model => model.MemoryType, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.MemoryType)
+                </td>
+            </tr>
+        </table>
+        
+       
+    </div>
+
+    <input type="submit" value="Wyślij" />
+}

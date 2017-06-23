@@ -1,0 +1,32 @@
+﻿@model MotherboardModel
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("/Views/Product/TypeForms/_SimpleProduct.cshtml", Model)
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.Chipset) </td>
+                <td>
+                    @Html.EditorFor(model => model.Chipset, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.Chipset)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.Socket) </td>
+                <td>
+                    @Html.EditorFor(model => model.Socket, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.Socket)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <input type="submit" value="Wyślij" />
+}

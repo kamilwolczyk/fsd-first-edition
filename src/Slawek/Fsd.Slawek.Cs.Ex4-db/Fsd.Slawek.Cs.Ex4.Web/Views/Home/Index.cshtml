@@ -1,0 +1,30 @@
+﻿@using Fsd.Slawek.Cs.Ex4.Data.Enums
+@model int
+@{
+    ViewBag.Title = "Welcome";
+    List<SelectListItem> list = new List<SelectListItem>
+    {
+        new SelectListItem {Text = "-Please select-", Value = "Selects items"}
+    };
+
+    foreach (var type in Enum.GetNames(typeof(ProductType)))
+    {
+        list.Add(new SelectListItem { Text = type, Value = type });
+    }
+}
+
+<div class="jumbotron">
+    <h2>Welcome in my first MVC project</h2>
+    <p>Number of products: @Model.ToString()</p>
+</div><br/>
+<div >
+    @using (Html.BeginForm())
+    {
+        @Html.DropDownList("Type", list,new{@class = "dropdown"});
+        <p><br />
+            <input class="btn btn-primary" type="submit" value="Submit" />
+        </p>
+    }
+    
+    
+</div>

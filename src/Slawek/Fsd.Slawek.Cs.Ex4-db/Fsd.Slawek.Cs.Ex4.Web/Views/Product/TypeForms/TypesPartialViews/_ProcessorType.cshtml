@@ -1,0 +1,32 @@
+﻿@model ProcessorModel
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("/Views/Product/TypeForms/_SimpleProduct.cshtml", Model)
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.ClockSpeed) </td>
+                <td>
+                    @Html.EditorFor(model => model.ClockSpeed, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.ClockSpeed)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.CacheSize) </td>
+                <td>
+                    @Html.EditorFor(model => model.CacheSize, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.CacheSize)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <input type="submit" value="Wyślij" />
+}
