@@ -1,0 +1,32 @@
+﻿@model MonitorModel
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("/Views/Product/TypeForms/_SimpleProduct.cshtml", Model)
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td  class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.ResponseTime) </td>
+                <td>
+                    @Html.EditorFor(model => model.ResponseTime, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.ResponseTime)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-group">
+        <table>
+            <tr>
+                <td class="img-rounded" style="width: 150px; background-color: cornflowerblue">@Html.LabelFor(model => model.Size) </td>
+                <td>
+                    @Html.EditorFor(model => model.Size, new {@class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.Size)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <input type="submit" value="Wyślij"/>
+}
