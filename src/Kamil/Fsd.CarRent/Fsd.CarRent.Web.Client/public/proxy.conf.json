@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "http://carrent.dev",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
